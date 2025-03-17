@@ -1,0 +1,39 @@
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: "Roboto", sans-serif;
+  font-family: "Exo 2", sans-serif;
+
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  overflow-y: auto;
+  height: 100dvh;
+  scroll-snap-type: y mandatory;
+
+  section {
+    scroll-snap-align: center;
+  }
+}
