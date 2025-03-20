@@ -33,7 +33,8 @@ ol {
   height: 100dvh;
   scroll-snap-type: y mandatory;
 
-  section {
+  section,
+  footer {
     scroll-snap-align: center;
   }
 }
