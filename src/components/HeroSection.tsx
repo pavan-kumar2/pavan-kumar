@@ -1,5 +1,5 @@
 import React from "react";
-import "./herosection.scss";
+import "./HeroSection.scss";
 
 type Props = {};
 
