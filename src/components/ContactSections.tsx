@@ -115,7 +115,7 @@ export default function ContactSections({}: Props) {
 
       {/* Contact Info */}
       <div className="right-section">
-        <img src="src\assets\contactme-2.webp" />
+        <img src="src\assets\contact-image.webp" />
       </div>
     </section>
   );
