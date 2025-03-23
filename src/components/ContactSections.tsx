@@ -44,8 +44,6 @@ export default function ContactSections({}: Props) {
     } catch (error) {
       setStatus("Failed to send message. Please try again later.");
     }
-
-   
   };
 
   return (
@@ -56,60 +54,72 @@ export default function ContactSections({}: Props) {
 
           {/* Contact Form */}
           <form onSubmit={handleSubmit}>
-            <div>
-            <label>Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              required
-            />
+            <div className="input-field">
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+              />
             </div>
 
+            <div className="input-field">
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+              />
+            </div>
 
-            <label>Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              required
-            />
+            <div className="input-field">
+              <label>Message:</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
 
-            <label>Message:</label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-            ></textarea>
-
-            <button type="submit">Send Message</button>
+            <div className="btn-container">
+              <button type="submit">Send Message</button>
+              {/* Status Message */}
+              {status && <p className="status">{status}</p>}
+            </div>
           </form>
 
-          {/* Status Message */}
-          {status && <p>{status}</p>}
+          <div className="contact-info">
+            <div className="mail">
+              <span className="label">Email:</span>
+              <a href="mailto:pavankkarkera480@gmail.com">
+                <img className="icon" src="src/assets/email-icon.svg" />
+                pavankkarkera480@gmail.com
+              </a>
+            </div>
 
-          <p>
-            Email:
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
-          </p>
-          <p>Connect with me:</p>
-          <ul>
-            <li>
-              <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://github.com/yourprofile">GitHub</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/yourhandle">Twitter</a>
-            </li>
-          </ul>
+            <div className="social-media-container">
+              <span className="label">Connect with me:</span>
+              <div className="social-media">
+                <a href="">
+                  <img src="src/assets/LinkedIn.png" alt="LinkedIn" />
+                </a>
+                <a href="">
+                  <img src="src/assets/GitHub.png" alt="GitHub" />
+                </a>
+                <a href="">
+                  <img src="src/assets/X.png" alt="X" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -119,6 +129,4 @@ export default function ContactSections({}: Props) {
       </div>
     </section>
   );
-
-
 }
