@@ -13,21 +13,21 @@ export default function FooterSection({}: Props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub
+          <img src="src/assets/github-white-icon.svg" alt="github"  />
         </a>
         <a
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
         >
-          LinkedIn
+          <img src="src/assets/linkedin-white-icon.svg" alt="linkedIn"  />
         </a>
         <a
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
         >
-          X
+           <img src="src/assets/X-white-icon.svg" alt="X"  />
         </a>
       </div>
     </footer>
