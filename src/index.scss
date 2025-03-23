@@ -35,6 +35,7 @@ ol {
 
   section,
   footer {
-    scroll-snap-align: center;
+    scroll-snap-align: end;
+    box-sizing: border-box;
   }
 }
