@@ -103,7 +103,7 @@ export default function EducationCertificationSection({}: Props) {
       </div>
 
       <div className="right-section">
-        <img src="public/assets/about-image.webp" />
+        <img src="about-image.webp" />
       </div>
     </section>
   );

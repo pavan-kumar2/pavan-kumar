@@ -54,7 +54,7 @@ export default function ExperienceSection({}: Props) {
         </div>
       </div>
       <div className="right-section">
-        <img src="public/assets/hero-image.webp" />
+        <img src="hero-image.webp" />
       </div>
     </section>
   );

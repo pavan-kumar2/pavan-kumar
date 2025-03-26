@@ -7,7 +7,7 @@ export default function AboutSection({}: Props) {
   return (
     <section className="about-section">
         <div className="right-section">
-        <img src="public/assets/about-image.webp" />
+        <img src="about-image.webp" />
       </div>
       <div className="left-section">
         <div className="content-container">

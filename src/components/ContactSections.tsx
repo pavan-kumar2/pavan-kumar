@@ -100,7 +100,7 @@ export default function ContactSections({}: Props) {
             <div className="mail">
               <span className="label">Email:</span>
               <a href="mailto:pavankkarkera480@gmail.com">
-                <img className="icon" src="public/assets/email-icon.svg" />
+                <img className="icon" src="email-icon.svg" />
                 pavankkarkera480@gmail.com
               </a>
             </div>
@@ -109,13 +109,13 @@ export default function ContactSections({}: Props) {
               <span className="label">Connect with me:</span>
               <div className="social-media">
                 <a href="">
-                  <img src="public/assets/LinkedIn.png" alt="LinkedIn" />
+                  <img src="LinkedIn.png" alt="LinkedIn" />
                 </a>
                 <a href="">
-                  <img src="public/assets/GitHub.png" alt="GitHub" />
+                  <img src="GitHub.png" alt="GitHub" />
                 </a>
                 <a href="">
-                  <img src="public/assets/X.png" alt="X" />
+                  <img src="X.png" alt="X" />
                 </a>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function ContactSections({}: Props) {
 
       {/* Contact Info */}
       <div className="right-section">
-        <img src="public/assets/contact-image.webp" />
+        <img src="contact-image.webp" />
       </div>
     </section>
   );
