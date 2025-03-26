@@ -1,5 +1,5 @@
 import React from "react";
-import "./herosection.scss";
+import "./HeroSection.scss";
 
 type Props = {};
 
@@ -16,9 +16,9 @@ export default function HeroSection({}: Props) {
             continuous learning, and empowered by unyielding determination
           </p>
           <div className="social-media">
-            <a href=""><img src="src\assets\new-2023-twitter-logo-x-icon-design_1017-45418.avif" alt="" /></a>
-            <a href=""><img src="src/assets/github.png" alt="" /></a>
-            <a href=""><img src="src/assets/LinkedIn_logo_initials.png" alt="" /></a>
+            <a href=""><img src="src/assets/LinkedIn.png" alt="LinkedIn"/></a>
+            <a href=""><img src="src/assets/GitHub.png" alt="GitHub" /></a>
+            <a href=""><img src="src/assets/X.png" alt="X" /></a>
           </div>
           <button className="download-btn">get my CV</button>
         </div>

@@ -1,34 +1,33 @@
 import React from "react";
+import "./FooterSection.scss";
 
 type Props = {};
 
 export default function FooterSection({}: Props) {
   return (
-    <footer
-      style={{
-        background: "#333",
-        color: "#fff",
-        textAlign: "center",
-        padding: "10px 0",
-      }}
-    >
-      <p>© {new Date().getFullYear()} Pavan Kumar. All rights reserved.</p>
-      <div style={{ marginTop: "5px" }}>
+    <footer className="footer-section">
+      <p className="copyright">© {new Date().getFullYear()} Pavan Kumar. All rights reserved.</p>
+      <div className="social-media">
         <a
           href="https://github.com/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#fff", margin: "0 10px", textDecoration: "none" }}
         >
-          GitHub
+          <img src="src/assets/github-white-icon.svg" alt="github"  />
         </a>
         <a
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#fff", margin: "0 10px", textDecoration: "none" }}
         >
-          LinkedIn
+          <img src="src/assets/linkedin-white-icon.svg" alt="linkedIn"  />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+           <img src="src/assets/X-white-icon.svg" alt="X"  />
         </a>
       </div>
     </footer>
