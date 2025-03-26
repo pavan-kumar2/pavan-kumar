@@ -1,21 +1,21 @@
-import React from "react";
+// import React from "react";
 import "./EducationCertificationSection.scss";
 
 type Props = {};
 
 export default function EducationCertificationSection({}: Props) {
-  const educationList = [
-    {
-      degree: "Bachelor's in Computer Science",
-      institution: "XYZ University",
-      year: "2019 - 2023",
-    },
-    {
-      degree: "React.js Certification",
-      institution: "Skill-Lync",
-      year: "2024",
-    },
-  ];
+  // const educationList = [
+  //   {
+  //     degree: "Bachelor's in Computer Science",
+  //     institution: "XYZ University",
+  //     year: "2019 - 2023",
+  //   },
+  //   {
+  //     degree: "React.js Certification",
+  //     institution: "Skill-Lync",
+  //     year: "2024",
+  //   },
+  // ];
 
   const certifications = [
     {
