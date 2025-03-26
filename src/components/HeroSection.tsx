@@ -16,15 +16,15 @@ export default function HeroSection({}: Props) {
             continuous learning, and empowered by unyielding determination
           </p>
           <div className="social-media">
-            <a href=""><img src="src/assets/LinkedIn.png" alt="LinkedIn"/></a>
-            <a href=""><img src="src/assets/GitHub.png" alt="GitHub" /></a>
-            <a href=""><img src="src/assets/X.png" alt="X" /></a>
+            <a href=""><img src="public/assets/LinkedIn.png" alt="LinkedIn"/></a>
+            <a href=""><img src="public/assets/GitHub.png" alt="GitHub" /></a>
+            <a href=""><img src="public/assets/X.png" alt="X" /></a>
           </div>
           <button className="download-btn">get my CV</button>
         </div>
       </div>
       <div className="right-section">
-        <img src="src/assets/hero-image.webp" />
+        <img src="public/assets/hero-image.webp" />
       </div>
     </section>
   );
