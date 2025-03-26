@@ -1,5 +1,5 @@
 // import React from "react";
-import "./SkillsTechnologiesSection.scss";
+import "./Skills-Section.scss";
 type Props = {};
 
 export default function SkillsTechnologiesSection({}: Props) {

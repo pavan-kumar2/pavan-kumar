@@ -1,5 +1,5 @@
 // import React from "react";
-import './AboutSection.scss'
+import './About-Section.scss'
 
 type Props = {};
 
