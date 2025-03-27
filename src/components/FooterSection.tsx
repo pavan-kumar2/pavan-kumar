@@ -27,7 +27,7 @@ export default function FooterSection({}: Props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-           <img src="X-white-icon.svg" alt="X"  />
+           <img src="x-white-icon.svg" alt="X"  />
         </a>
       </div>
     </footer>
