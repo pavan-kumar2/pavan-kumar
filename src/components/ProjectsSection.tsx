@@ -7,56 +7,37 @@ type Props = {}
 export default function ProjectsSection({}: Props) {
     const projects = [
         {
-          title: "E-Commerce App",
+          title: "Swag of India",
           description:
-            "A React-based e-commerce platform with product listing, filtering, and cart management.",
+            "Swag of India E-commerce website Project using HTML5, CSS3, Bootstrap4, JavaScript and jQuery",
           image: "/ecommerce-app.jpg", // Replace with your image path
-          link: "https://yourprojectlink.com",
+          link: "https://pavan-kumar2.github.io/Swag_of_India/",
         },
-        
         {
-            title: "Portfolio Website",
+            title: "Movie-Application",
             description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
+              "The movie app is a web application that allows users to browse and search for movies, view movie details, and view their IMDb ratings. The app is built using HTML, CSS, JavaScript and React JS for the frontend, and uses a third-party API to retrieve movie data.",
             image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
+            link: "https://pavan-kumar2.github.io/Movie-Application/",
           },{
-            title: "Portfolio Website",
+            title: "multinational-news-app",
             description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
+              "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
             image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
+            link: "https://multinational-news-app.netlify.app/",
           },{
-            title: "Portfolio Website",
+            title: "E commerce app",
             description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
+              "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
             image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
+            link: "https://multinational-news-app.netlify.app/",
           },{
-            title: "Portfolio Website",
+            title: "Pavan Kumar",
             description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
+              "Pavan kunar portfoilio website",
             image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
-          },{
-            title: "Portfolio Website",
-            description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
-            image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
-          },{
-            title: "Portfolio Website",
-            description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
-            image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
-          },{
-            title: "Portfolio Website",
-            description:
-              "A personal portfolio built with React and Tailwind CSS showcasing my projects.",
-            image: "/portfolio.jpg", // Replace with your image path
-            link: "https://yourportfolio.com",
-          },
+            link: "",
+          }
       ];
 
   return (
