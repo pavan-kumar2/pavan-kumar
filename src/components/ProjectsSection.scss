@@ -42,6 +42,34 @@
         transition: all 0.5s;
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .name {
+          font-size: 20px;
+          font-weight: 600;
+          color: black;
+        }
+
+        .description {
+          font-size: 16px;
+          font-weight: 500;
+          color: black;
+        }
+
+        .project-image {
+          width: 100%;
+        }
+
+        .key-skills {
+          font-size: 14px;
+          font-weight: 500;
+          color: black;
+          span {
+            font-weight: 600;
+          }
+        }
 
         &::before {
           content: "";
@@ -80,14 +108,26 @@
           object-fit: contain;
         }
 
-        a {
-          background-color: black;
-          color: white;
-          padding: 10px 15px;
-          font-size: 16px;
-          font-weight: 500;
-          border: none;
-          width: max-content;
+        .buttons-wrapper {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          gap: 25px;
+
+          .view-project {
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #000000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            &:active {
+              transform: scale(0.97);
+            }
+          }
         }
       }
 
