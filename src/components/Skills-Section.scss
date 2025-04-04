@@ -1,3 +1,36 @@
+/* Animation */
+@keyframes rotate {
+  from,
+  to {
+    animation-timing-function: ease-in;
+    box-shadow: 0 0 0 hsl(0, 0%, 80%), 0.1rem 0 0 hsl(0, 0%, 100%),
+      -0.2rem 0 0.75rem 0 hsla(0, 0%, 0%, 0.3);
+    transform: rotateY(-10deg);
+  }
+  25%,
+  75% {
+    animation-timing-function: ease-out;
+    box-shadow: 0 0 0 hsl(0, 0%, 80%), 0 0 0 hsl(0, 0%, 100%),
+      -0.25rem -0.05rem 1rem 0.15rem hsla(0, 0%, 0%, 0.3);
+    transform: rotateY(0deg);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    box-shadow: -0.1rem 0 0 hsl(0, 0%, 80%), 0 0 0 hsl(0, 0%, 100%),
+      -0.3rem -0.1rem 1.5rem 0.3rem hsla(0, 0%, 0%, 0.3);
+    transform: rotateY(10deg);
+  }
+}
+@keyframes texture {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .skills-technologies-section {
   // width: 100%;
   min-height: 100dvh;
@@ -21,132 +54,74 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
   }
 
-  .cards-wrapper {
+  .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    // background-color: #ffffff;
+    justify-content: center;
+    gap: 25px;
 
-    .card {
-      box-sizing: border-box;
-      width: calc((100% - 60px) / 4);
-      background-color: #ffffff;
-      color: #000000;
-      height: 400px;
-      padding: 15px;
-      border-radius: 25px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    li {
+      width: calc(100% / 9);
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      .skill {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        animation-name: rotate;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 hsl(0, 0%, 80%), 0 0 0 hsl(0, 0%, 100%),
+          -0.2rem 0 0.75rem 0 hsla(0, 0%, 0%, 0.3);
+        color: hsl(0, 0%, 100%);
+        width: 150px;
+        height: 150px;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .skill-img-texture {
+        height: 100px;
+        width: 90px;
+        object-fit: contain;
+      }
+
+      .skill,
+      .skill-texture {
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+      .skill-texture {
+        position: absolute;
+        animation-name: texture;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        animation-name: texture;
+        background-image: linear-gradient(
+          -80deg,
+          hsla(0, 0%, 100%, 0.3) 25%,
+          hsla(0, 0%, 100%, 0) 45%
+        );
+      }
+
+      .skill-label {
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 20%;
+      }
     }
   }
 }
-
-// .about-section {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   .left-section {
-
-//     width: 70%;
-
-//     .content-container {
-//       border-radius: 20px 20px 20px 150px;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       justify-content: center;
-//       height: 100%;
-//       background-color: #ffffff;
-//       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
-//       padding: 30px;
-//       gap: 15px;
-
-//       h2 {
-//         font-size: 28px;
-//         font-weight: 600;
-//         color: #000000;
-//         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-//         text-transform: uppercase;
-//         letter-spacing: 2px;
-
-//         &:first-child {
-//           margin: 0 auto 0 0;
-//         }
-
-//         &:nth-child(2) {
-//           margin: 0 auto;
-//         }
-
-//         &:nth-child(3) {
-//           margin: 0 0 0 auto;
-//         }
-//       }
-
-//       p {
-//         font-size: 22px;
-//         font-weight: 500;
-//         color: #000000;
-//         text-transform: uppercase;
-//         letter-spacing: 1px;
-//         margin: 40px 0;
-//         line-height: 30px;
-//       }
-
-//       .social-media {
-//         display: flex;
-//         align-items: center;
-//         gap: 15px;
-
-//         a {
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-
-//           img {
-//             width: 30px;
-//             height: 30px;
-//             object-fit: contain;
-//           }
-
-//           &:hover {
-//             opacity: 0.8;
-//           }
-//         }
-//       }
-
-//       .download-btn {
-//         border: none;
-//         font-size: 16px;
-//         font-weight: 500;
-//         color: #ffffff;
-//         background-color: #000000;
-//         padding: 10px 20px;
-//         border-radius: 5px;
-//         transition: all 0.3s ease-in-out;
-//         margin: 30px 0 10px;
-//         &:active {
-//           transform: scale(0.97);
-//         }
-//       }
-//     }
-//   }
-//   .right-section {
-//     display: flex;
-//     width: 30%;
-//     height: 100%;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: contain;
-//       //   -webkit-transform: scaleX(-1);
-//       //   transform: scaleX(-1);
-
-//       transition: all 0.7s ease-in-out;
-//       transform: translate(-100%);
-//       transform: translateX(0%);
-//       //   transform: scaleX(-1) translateX(100%);
-//       //   transform: scaleX(-1) translateX(0%);
-//     }
-//   }
-// }

@@ -4,38 +4,40 @@ type Props = {};
 
 export default function SkillsTechnologiesSection({}: Props) {
   const skills = [
-  
-   
-  
     // { name: "NPM", level: "Advanced" },
     // { name: "Redux", level: "Advanced" },
     // { name: "NGRX", level: "Advanced" },
     // { name: "SIGNALS", level: "Advanced" },
 
-
-    { name: "HTML", level: "Advanced" },
-    { name: "CSS", level: "Expert" },
-    { name: "JavaScript", level: "Advanced" },
-    { name: "TypeScript", level: "Advanced" },
-    { name: "React.js", level: "Expert" },
-    { name: "Angular", level: "Expert" },
-    { name: "Bootstrap", level: "Advanced" },
-    { name: "Tailwind CSS", level: "Advanced" },
-    { name: "RXJS", level: "Advanced" },
-    { name: "SCSS", level: "Expert" },
-    { name: "SASS", level: "Advanced" },
-    { name: "GIT", level: "Advanced" },
-    { name: "FIGMA", level: "Advanced" },
+    { name: "HTML", logo: "html-logo.png" },
+    { name: "CSS", logo: "css-logo.png" },
+    { name: "JavaScript", logo: "javascript-logo.png" },
+    { name: "TypeScript", logo: "Typescript-logo.png" },
+    { name: "React.js", logo: "reactjs-logo.svg" },
+    { name: "Angular", logo: "angular-logo.svg"},
+    { name: "Bootstrap", logo: "bootstrap-logo.svg" },
+    { name: "Tailwind CSS", logo: "tailwind-css-logo.svg" },
+    { name: "RXJS", logo: "Rxjs-logo.png" },
+    { name: "SASS/SCSS", logo: "sass-scss-logo.svg" },
+    { name: "GIT", logo: "git-logo.svg" },
+    { name: "FIGMA", logo: "Figma-logo.png" },
   ];
 
   return (
     <section className="skills-technologies-section">
       <div className="title">Skills & Technologies</div>
 
-      <ul>
+      <ul className="skills-wrapper">
         {skills.map((skill, index) => (
           <li key={index}>
-            <strong>{skill.name}:</strong> {skill.level}
+      
+            <div className="skill">
+              <img className="skill-img-texture" src={skill.logo} />
+              <div className="skill-texture"></div>
+            </div>
+            
+            <div className="skill-label">{skill.name}</div>
+           
           </li>
         ))}
       </ul>
