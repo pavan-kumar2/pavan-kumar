@@ -11,8 +11,8 @@ export default function ProjectsSection({}: Props) {
       description:
         "Swag of India E-commerce website Project using HTML5, CSS3, Bootstrap4, JavaScript and jQuery",
       image: "swagofindia-preview-image.png", // Replace with your image path
-      liveDemo:'https://multinational-news-app.netlify.app/',
-      github:'https://github.com/pavan-kumar2/Multinational-News-App'
+      liveDemo:'https://pavan-kumar2.github.io/Swag_of_India',
+      github:'https://github.com/pavan-kumar2/Swag_of_India'
     },
     {
       title: "Movie-Application",
@@ -26,8 +26,7 @@ export default function ProjectsSection({}: Props) {
       title: "multinational-news-app",
       description:
         "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
-        image: "swagofindia-preview-image.png", // Replace with your image path
-      
+        image: "multinational-news-app-preview-image.png", // Replace with your image path
         liveDemo:'https://multinational-news-app.netlify.app/',
         github:'https://github.com/pavan-kumar2/Multinational-News-App'
     },
