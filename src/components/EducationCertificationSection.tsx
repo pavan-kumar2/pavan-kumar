@@ -37,7 +37,11 @@ export default function EducationCertificationSection({}: Props) {
 
   return (
     <section className="eduction-certification-section">
+      
       <div className="left-section">
+        <img src="education-section.webp" />
+      </div>
+      <div className="right-section">
         <div className="content-container">
           <div className="educations">
             <h2>Education</h2>
@@ -102,9 +106,7 @@ export default function EducationCertificationSection({}: Props) {
         </div>
       </div>
 
-      <div className="right-section">
-        <img src="education-section.webp" />
-      </div>
+     
     </section>
   );
 }
