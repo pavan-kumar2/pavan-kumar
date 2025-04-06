@@ -4,38 +4,42 @@ import "./ProjectsSection.scss";
 
 type Props = {};
 
-export default function ProjectsSection({}: Props) {
+export default function ProjectsSection({ }: Props) {
   const projects = [
     {
       title: "Swag of India",
-      description:
-        "Swag of India E-commerce website Project using HTML5, CSS3, Bootstrap4, JavaScript and jQuery",
-      image: "swagofindia-preview-image.png", // Replace with your image path
-      liveDemo:'https://pavan-kumar2.github.io/Swag_of_India',
-      github:'https://github.com/pavan-kumar2/Swag_of_India'
+      description: "Swag of India is a responsive e-commerce website designed to provide users with a seamless online shopping experience. The project showcases various products and offers functionalities like product browsing, cart management, and user profile handling.",
+      image: "swag-of-india-preview-image.png", 
+      keySkills: ['HTML5', 'CSS3', 'JavaScript', 'jQuery','Bootstrap', 'AJAX & JSON'],
+      liveDemo: 'https://pavan-kumar2.github.io/Swag_of_India',
+      github: 'https://github.com/pavan-kumar2/Swag_of_India'
     },
     {
-      title: "Movie-Application",
+      title: "Movie Overview Application",
       description:
-        "The movie app is a web application that allows users to browse and search for movies, view movie details, and view their IMDb ratings. The app is built using HTML, CSS, JavaScript and React JS for the frontend, and uses a third-party API to retrieve movie data.",
-        image: "swagofindia-preview-image.png", // Replace with your image path
-        liveDemo:'https://multinational-news-app.netlify.app/',
-        github:'https://github.com/pavan-kumar2/Multinational-News-App'
+        "The movie overview app is a web application that allows users to browse and search for movies, view movie details, and view their IMDb ratings. And uses a third-party API to retrieve movie data.",
+      image: "movie-overview-application-preview-image.png",
+      keySkills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'AJAX', 'JSX'],
+      liveDemo: 'https://multinational-news-app.netlify.app/',
+      github: 'https://github.com/pavan-kumar2/Movie-Overview-Application'
     },
     {
-      title: "multinational-news-app",
+      title: "Multinational News App",
       description:
         "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
-        image: "multinational-news-app-preview-image.png", // Replace with your image path
-        liveDemo:'https://multinational-news-app.netlify.app/',
-        github:'https://github.com/pavan-kumar2/Multinational-News-App'
+      image: "multinational-news-app-preview-image.png", 
+      keySkills: ['HTML5', 'CSS3', 'JavaScript', 'Typescript', 'Angular', 'SCSS', 'RxJS'],
+      liveDemo: 'https://multinational-news-app.netlify.app/',
+      github: 'https://github.com/pavan-kumar2/Multinational-News-App'
     },
     {
-      title: "E commerce app",
+      title: "E-commerce App",
       description:
         "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
-        image: "swagofindia-preview-image.png", // Replace with your image path
-      link: "https://multinational-news-app.netlify.app/",
+      image: "multinational-news-app-preview-image.png", 
+      keySkills: ['HTML5', 'CSS3', 'JavaScript','Bootstrap', 'React.js' ],
+      liveDemo: 'https://pavan-kumar-e-commerce-application.netlify.app/',
+      github: 'https://github.com/pavan-kumar2/Ecommerce-App'
     },
     {
       title: "Pavan Kumar",
@@ -58,7 +62,7 @@ export default function ProjectsSection({}: Props) {
               <p className="description">{project.description}</p>
               <div className="key-skills">
                 <span>Key Skills: </span>
-              HTML5, CSS3, JavaScript, ReactJS
+                {project?.keySkills?.join(", ")}
               </div>
             </div>
 
