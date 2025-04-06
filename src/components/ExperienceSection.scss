@@ -21,7 +21,7 @@
       background-color: #ffffff;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
       padding: 30px 60px 30px 30px;
-      gap: 15px;
+      gap: 25px;
       color: black;
 
       h2 {
@@ -31,50 +31,69 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         letter-spacing: 2px;
-
-        &:first-child {
-          margin: 0 auto 0 0;
-        }
+        margin: 0 auto 0 0;
       }
 
-      // p {
-      //   font-size: 22px;
-      //   font-weight: 500;
-      //   color: #000000;
-      //   text-transform: uppercase;
-      //   letter-spacing: 1px;
-      //   margin: 40px 0;
-      //   line-height: 30px;
-      // }
-
       .experience {
-        h3 {
+        .title {
           font-size: 22px;
           font-weight: 500;
           color: #000000;
           text-transform: uppercase;
           letter-spacing: 1px;
-          // margin: 0;
           line-height: 30px;
+          span {
+            font-weight: 600;
+          }
+          a {
+            text-decoration: none;
+          }
         }
-        p {
+        .duration {
           font-size: 18px;
           font-weight: 400;
           color: #000000;
           text-transform: uppercase;
           letter-spacing: 1px;
-          // margin: 0;
           line-height: 30px;
+          border-bottom: 1px solid #000000;
+          width: max-content;
         }
-        ul {
+        .contributions {
           display: flex;
           flex-direction: column;
           gap: 3px;
-          margin-left: 20px;
+          margin: 20px 0 20px 30px;
           li {
             font-size: 16px;
             font-weight: 400;
             color: #000000;
+          }
+        }
+
+        .project-worked-on {
+          h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+          }
+          ul {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0 10px 30px;
+            list-style: none;
+            li {
+              display: flex;
+              a {
+                font-size: 16px;
+                font-weight: 400;
+                // color: #000000;
+                border: 1px solid #000000;
+                border-radius: 10px;
+                padding: 10px;
+                text-decoration: none;
+              }
+            }
           }
         }
       }
