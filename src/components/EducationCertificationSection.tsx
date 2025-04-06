@@ -20,17 +20,26 @@ export default function EducationCertificationSection({}: Props) {
   const certifications = [
     {
       title: "Complete Front-End Development",
-      provider: "Skill Lync",
+      provider: {
+        name:'Skill Lync', 
+        url:'https://www.google.com/search?q=Skill+Lync'
+      },
       link: "https://skill-lync.com/certification/individual/k758ulf6v4mzcabw", // Replace with actual link
     },
     {
       title: "Angular Web Development for the Real World",
-      provider: "Skill Lync",
+      provider: {
+        name:'Skill Lync', 
+        url:'https://www.google.com/search?q=Skill+Lync'
+      },
       link: "https://skill-lync.com/certification/individual/72fe4v8o1qzbs9l0", // Replace with actual link
     },
     {
       title: "React.js",
-      provider: "Skill Lync",
+      provider: {
+        name:'Skill Lync', 
+        url:'https://www.google.com/search?q=Skill+Lync'
+      },
       link: "https://skill-lync.com/certification/individual/pfw05dvzmuensjl6", // Replace with actual link
     },
   ];
@@ -66,14 +75,14 @@ export default function EducationCertificationSection({}: Props) {
               <div className="education">
                   <span> Class 12th </span>
                   in <span>Commerce</span> at
-                  <a href="https://www.google.com/search?q=St.+Josephs+Pre-University+College+Bajpe&sca_esv=5eadaca3d07e07eb&rlz=1C1VDKB_enIN1133IN1133&udm=2&biw=1536&bih=695&sxsrf=AHTn8zoL78p1H2UrvjQ0xFc78lY2Ds16uw%3A1742748809280&ei=iTzgZ7_rEIiN4-EPi6WO4QM&ved=0ahUKEwj_09ad1aCMAxWIxjgGHYuSIzwQ4dUDCBE&uact=5&oq=St.+Josephs+Pre-University+College+Bajpe&gs_lp=EgNpbWciKFN0LiBKb3NlcGhzIFByZS1Vbml2ZXJzaXR5IENvbGxlZ2UgQmFqcGUyBxAAGIAEGAoyBxAAGIAEGAoyBxAAGIAEGApISVAAWABwAXgAkAEAmAEAoAEAqgEAuAEDyAEAmAIBoAIMmAMAiAYBkgcBMaAHALIHALgHAA&sclient=img"> St. Josephs Pre-University College </a>
+                  <a href="https://www.google.com/search?q=St.+Josephs+Pre-University+College+Bajpe"> St. Josephs Pre-University College </a>
                   passed out in 2015
                 </div>
               </li>
               <li>
               <div className="education">
                   <span> Class 10th </span> at
-                  <a href="https://www.google.com/search?q=St.+Joseph%60s+High+School+bajpe&sca_esv=65173d9604faf661&rlz=1C1VDKB_enIN1133IN1133&sxsrf=AHTn8zpKxEMBFPC3dkOy_s-rRcILMujgHA%3A1742749292392&ei=bD7gZ8HLF7ed4-EP7J7GuAU&ved=0ahUKEwjBsYWE16CMAxW3zjgGHWyPEVcQ4dUDCBA&uact=5&oq=St.+Joseph%60s+High+School+bajpe&gs_lp=Egxnd3Mtd2l6LXNlcnAiHlN0LiBKb3NlcGhgcyBIaWdoIFNjaG9vbCBiYWpwZTIJEAAYsAMYDRgeMgkQABiwAxgKGB4yCBAAGLADGO8FMggQABiwAxjvBTILEAAYgAQYsAMYogQyCxAAGIAEGLADGKIESJ-nAlAAWABwAngAkAEAmAEAoAEAqgEAuAEDyAEAmAICoAIMmAMAiAYBkAYGkgcBMqAHALIHALgHAA&sclient=gws-wiz-serp"> St. Joseph`s High School </a>
+                  <a href="https://www.google.com/search?q=St.+Joseph%60s+High+School+bajpe"> St. Joseph`s High School </a>
                   passed out in 2013
                 </div>
                 </li>
@@ -87,7 +96,7 @@ export default function EducationCertificationSection({}: Props) {
               <li key={index}>
                 <div className="certificate">
                   <h3 className="title">{cert.title}</h3>
-                  <p className="provider">{cert.provider}</p>
+                  <a className="provider" href={cert.provider.url}>{cert.provider.name}</a>
                   <a
                     className="view-btn"
                     href={cert.link}
