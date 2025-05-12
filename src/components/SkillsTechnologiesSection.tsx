@@ -1,14 +1,10 @@
 // import React from "react";
+import { memo } from "react";
 import "./Skills-Section.scss";
 type Props = {};
 
-export default function SkillsTechnologiesSection({}: Props) {
+const SkillsTechnologiesSection =({}: Props)=> {
   const skills = [
-    // { name: "NPM", level: "Advanced" },
-    // { name: "Redux", level: "Advanced" },
-    // { name: "NGRX", level: "Advanced" },
-    // { name: "SIGNALS", level: "Advanced" },
-
     { name: "HTML", logo: "html-logo.png" },
     { name: "CSS", logo: "css-logo.png" },
     { name: "JavaScript", logo: "javascript-logo.png" },
@@ -20,7 +16,7 @@ export default function SkillsTechnologiesSection({}: Props) {
     { name: "RXJS", logo: "Rxjs-logo.png" },
     { name: "SASS/SCSS", logo: "sass-scss-logo.svg" },
     { name: "GIT", logo: "git-logo.svg" },
-    { name: "FIGMA", logo: "Figma-logo.png" },
+    // { name: "FIGMA", logo: "Figma-logo.png" },
   ];
 
   return (
@@ -44,3 +40,6 @@ export default function SkillsTechnologiesSection({}: Props) {
     </section>
   );
 }
+
+
+export default memo(SkillsTechnologiesSection);
