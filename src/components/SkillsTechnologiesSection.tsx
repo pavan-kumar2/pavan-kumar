@@ -1,6 +1,6 @@
 // import React from "react";
 import { memo } from "react";
-import "./Skills-Section.scss";
+import "./SkillsSection.scss";
 type Props = {};
 
 const SkillsTechnologiesSection =({}: Props)=> {

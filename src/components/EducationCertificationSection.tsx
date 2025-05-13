@@ -63,7 +63,7 @@ export default function EducationCertificationSection({}: Props) {
                   passed out in 2021
                 </div>
               </li>
-              <li>
+              {/* <li>
               <div className="education">
                   <span> Diploma</span>
                   in <span>Mechanical engineering</span> at
@@ -85,7 +85,7 @@ export default function EducationCertificationSection({}: Props) {
                   <a href="https://www.google.com/search?q=St.+Joseph%60s+High+School+bajpe"> St. Joseph`s High School </a>
                   passed out in 2013
                 </div>
-                </li>
+                </li> */}
             </ul>
           </div>
 
