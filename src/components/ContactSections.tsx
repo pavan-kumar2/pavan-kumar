@@ -55,7 +55,6 @@ export default function ContactSections({}: Props) {
           {/* Contact Form */}
           <form onSubmit={handleSubmit}>
             <div className="input-field">
-              <label>Name:</label>
               <input
                 type="text"
                 name="name"
@@ -67,7 +66,6 @@ export default function ContactSections({}: Props) {
             </div>
 
             <div className="input-field">
-              <label>Email:</label>
               <input
                 type="email"
                 name="email"
@@ -79,7 +77,6 @@ export default function ContactSections({}: Props) {
             </div>
 
             <div className="input-field">
-              <label>Message:</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -108,13 +105,13 @@ export default function ContactSections({}: Props) {
             <div className="social-media-container">
               <span className="label">Connect with me:</span>
               <div className="social-media">
-                <a href="">
+                <a href="https://www.linkedin.com/in/pavan-kumar-513180191" target="_blank">
                   <img src="LinkedIn.png" alt="LinkedIn" />
                 </a>
-                <a href="">
+                <a href="https://github.com/pavan-kumar2" target="_blank">
                   <img src="GitHub.png" alt="GitHub" />
                 </a>
-                <a href="">
+                <a  href="https://x.com/Pavankumar_0997" target="_blank">
                   <img src="X.png" alt="X" />
                 </a>
               </div>

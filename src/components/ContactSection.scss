@@ -38,7 +38,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-
+        margin-top: 10px;
         .input-field {
           display: flex;
           flex-direction: column;
@@ -52,6 +52,7 @@
             color: #000000;
             font-size: 16px;
             font-weight: 500;
+            font-family: inherit;
             transition: all 0.3s ease-in-out;
             &:focus {
               outline: none;
@@ -70,6 +71,7 @@
             color: #000000;
             font-size: 16px;
             font-weight: 500;
+            font-family: inherit;
             transition: all 0.3s ease-in-out;
             &:focus {
               outline: none;
@@ -92,7 +94,7 @@
             border-radius: 5px;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
-            margin-bottom: 20px;
+            margin-block: 5px 15px;
             &:active {
               transform: scale(0.99);
             }
@@ -101,10 +103,10 @@
           .status {
             position: absolute;
             width: 100%;
-            bottom: 0;
+            bottom: -3px;
             font-size: 14px;
             font-weight: 400;
-            color: #000000;
+            color: #e21f1f;
           }
         }
       }
