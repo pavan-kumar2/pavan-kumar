@@ -15,23 +15,23 @@ export default function AboutSection({}: Props) {
 
           <div>
             <p>
-              I’m a driven and creative <span>Frontend Developer</span>who thrives on
-              transforming ideas into seamless digital experiences. With a
-              strong foundation in building user-centric interfaces, I blend
-              aesthetics with functionality to create applications that are both
-              beautiful and performant.
+              I’m a  <span>  detail-oriented Frontend Developer</span> with over
+               <span>  2 years of experience</span> building responsive, scalable,
+              and efficient web applications. I thrive on transforming complex
+              requirements into seamless, high-performing user interfaces, with
+              a strong focus on performance, code quality, and maintainability.
             </p>
+
             <p>
-              My expertise lies in <span>responsive design, component-based
-              architecture, and interactive UI development,</span> and I love bringing
-              concepts to life using technologies.
-            </p>
-            <p>
-              My journey in <span>web development</span>  is fueled by a deep curiosity, a
-              love for clean code, and a mission to deliver meaningful
-              experiences through every line of code. Whether I’m working
-              independently or with a team, I believe in thoughtful design,
-              continuous learning, and building with purpose.
+              My expertise spans responsive layouts,
+               <span>  component-driven development</span>, and building
+              interactive, real-time features. My journey in web development is
+              fueled by curiosity, a deep interest in
+               <span>  frontend architecture</span>, and a drive to solve problems
+              through clean and reliable code. Whether working independently or
+              within a team, I value clear structure,
+               <span>  continuous improvement</span>, and delivering purposeful
+              solutions.
             </p>
           </div>
         </div>
