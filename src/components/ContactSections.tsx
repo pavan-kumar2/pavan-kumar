@@ -1,8 +1,8 @@
 // import React from "react";
 import { useState } from "react";
-import emailjs from "emailjs-com";
 
 import "./ContactSection.scss";
+import axios from "axios";
 
 type Props = {};
 
@@ -13,36 +13,71 @@ export default function ContactSections({}: Props) {
     message: "",
   });
 
-  const [status, setStatus] = useState("");
+  const [loader, setLoader] = useState(false);
 
-  // Handle form input changes
-  const handleChange = (e: any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [notification, setNotification] = useState<{
+    class?: string;
+    status?: string;
+  }>({});
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      setStatus("Please fill in all fields.");
+      setNotification({ class: "error", status: "Please fill in all fields." });
       return;
     }
 
-    try {
-      const response = await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        formData,
-        "YOUR_USER_ID" // Replace with your EmailJS user/public key
-      );
+    setLoader(true);
 
+    const data: {
+      service_id: string;
+      template_id: string;
+      user_id: string;
+      template_params: { name: string; email: string; message: string };
+    } = {
+      service_id: "service_gw98pac",
+      template_id: "template_12ivt5p",
+      user_id: "O6e9EFJp2inNw0rN4",
+      template_params: { ...formData },
+    };
+
+    try {
+      const response = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data
+      );
       if (response.status === 200) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" }); // Reset form
+        setNotification({
+          class: "success",
+          status: "Message sent successfully!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+        setLoader(false);
+      } else {
+        setNotification({
+          class: "error",
+          status: "Something went wrong. Please try again.",
+        });
       }
     } catch (error) {
-      setStatus("Failed to send message. Please try again later.");
+      setNotification({
+        class: "error",
+        status: "Failed to send message. Please try again!",
+      });
+    } finally {
+      setLoader(false);
+
+      setTimeout(() => {
+        setNotification({});
+      }, 3000);
     }
   };
 
@@ -52,7 +87,6 @@ export default function ContactSections({}: Props) {
         <div className="content-container">
           <h2>Feel Free to Contact Me</h2>
 
-          {/* Contact Form */}
           <form onSubmit={handleSubmit}>
             <div className="input-field">
               <input
@@ -87,9 +121,13 @@ export default function ContactSections({}: Props) {
             </div>
 
             <div className="btn-container">
-              <button type="submit">Send Message</button>
-              {/* Status Message */}
-              {status && <p className="status">{status}</p>}
+              <button type="submit" className={loader?'disable':""}>{loader? 'loading...': 'Send Message'} </button>
+
+              {notification.status && (
+                <p className={`status ${notification.class}`}>
+                  {notification.status}
+                </p>
+              )}
             </div>
           </form>
 
@@ -105,13 +143,16 @@ export default function ContactSections({}: Props) {
             <div className="social-media-container">
               <span className="label">Connect with me:</span>
               <div className="social-media">
-                <a href="https://www.linkedin.com/in/pavan-kumar-513180191" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/pavan-kumar-513180191"
+                  target="_blank"
+                >
                   <img src="LinkedIn.png" alt="LinkedIn" />
                 </a>
                 <a href="https://github.com/pavan-kumar2" target="_blank">
                   <img src="GitHub.png" alt="GitHub" />
                 </a>
-                <a  href="https://x.com/Pavankumar_0997" target="_blank">
+                <a href="https://x.com/Pavankumar_0997" target="_blank">
                   <img src="X.png" alt="X" />
                 </a>
               </div>

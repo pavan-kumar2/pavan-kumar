@@ -98,15 +98,28 @@
             &:active {
               transform: scale(0.99);
             }
+
+            &.disable {
+              opacity: 0.7;
+              pointer-events: none;
+            }
           }
 
           .status {
             position: absolute;
             width: 100%;
-            bottom: -3px;
-            font-size: 14px;
-            font-weight: 400;
-            color: #e21f1f;
+            bottom: -5px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #dc3545;
+
+            &.error {
+              color: #dc3545;
+            }
+
+            &.success {
+              color: #28a745;
+            }
           }
         }
       }
