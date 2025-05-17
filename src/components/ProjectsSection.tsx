@@ -67,7 +67,7 @@ export default function ProjectsSection({}: Props) {
 
   return (
     <section className="projects-section">
-      <div className="title">My Projects For skill develop</div>
+      <div className="title">Skill-Building Projects</div>
 
       <div className="cards-wrapper">
         {projects.map((project, index) => (
@@ -103,7 +103,7 @@ export default function ProjectsSection({}: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  GitHub Repo
                 </a>
               </div>
             </div>
