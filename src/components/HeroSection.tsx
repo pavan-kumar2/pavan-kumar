@@ -1,5 +1,5 @@
 // import React from "react";
-import "./Hero-Section.scss";
+import "./HeroSection.scss";
 import { useInView } from "react-intersection-observer";
 
 type Props = {};
