@@ -62,7 +62,7 @@ export default function ExperienceSection({}: Props) {
           {experience.map((job, index) => (
             <div className="experience" key={index}>
               <h3 className="title">
-                <span>{job.role}</span> -  <a href={job.company.url}>{job.company.name}</a>
+                <span>{job.role}</span> -  <a href={job.company.url} target="_blank">{job.company.name}</a>
               </h3>
               <p className="duration">{job.duration}</p>
               <ul className="contributions">
