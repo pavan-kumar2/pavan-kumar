@@ -1,12 +1,19 @@
 // import React from "react";
 import "./Hero-Section.scss";
+import { useInView } from 'react-intersection-observer';
 
 type Props = {};
 
 export default function HeroSection({}: Props) {
+
+const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
   return (
-    <section className="hero-section">
-      <div className="left-section">
+    <section className="hero-section" ref={ref}>
+      <div className={`left-section ${inView?"left-translate":""}`}>
         <div className="content-container">
           <h2>Hi There! 👋🏻</h2>
           <h2>I'M PAVAN KUMAR</h2>
@@ -15,7 +22,7 @@ export default function HeroSection({}: Props) {
             Fuelled by aggression, driven by persistence, committed to
             continuous learning, and empowered by unyielding determination
           </p>
-          <button className="download-btn">get my CV</button>
+          <a className="download-btn" href="Resume_Coming_Soon.pdf" download>get my CV</a>
           <div className="contact-info">
             <div className="mail">
               <span className="label">Email:</span>
@@ -42,7 +49,7 @@ export default function HeroSection({}: Props) {
           </div>
         </div>
       </div>
-      <div className="right-section">
+      <div className={`right-section ${inView?"right-translate":""}`}>
         <img src="hero-image.webp" />
       </div>
     </section>
