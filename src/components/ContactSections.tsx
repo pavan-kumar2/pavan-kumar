@@ -1,5 +1,7 @@
 // import React from "react";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
+
 
 import "./ContactSection.scss";
 import axios from "axios";
@@ -7,6 +9,12 @@ import axios from "axios";
 type Props = {};
 
 export default function ContactSections({}: Props) {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -82,8 +90,8 @@ export default function ContactSections({}: Props) {
   };
 
   return (
-    <section className="contact-section">
-      <div className="left-section">
+    <section className="contact-section"  ref={ref}>
+      <div  className={`left-section ${inView ? "left-translate" : ""}`}>
         <div className="content-container">
           <h2>Feel Free to Contact Me</h2>
 
@@ -160,9 +168,7 @@ export default function ContactSections({}: Props) {
           </div>
         </div>
       </div>
-
-      {/* Contact Info */}
-      <div className="right-section">
+      <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <img src="contact-image.webp" />
       </div>
     </section>

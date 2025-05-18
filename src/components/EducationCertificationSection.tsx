@@ -1,5 +1,6 @@
 // import React from "react";
 import "./EducationCertificationSection.scss";
+import { useInView } from 'react-intersection-observer';
 
 type Props = {};
 
@@ -16,6 +17,12 @@ export default function EducationCertificationSection({}: Props) {
   //     year: "2024",
   //   },
   // ];
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
 
   const certifications = [
     {
@@ -45,12 +52,11 @@ export default function EducationCertificationSection({}: Props) {
   ];
 
   return (
-    <section className="eduction-certification-section">
-      
-      <div className="left-section">
+    <section className="eduction-certification-section" ref={ref}> 
+      <div className={`left-section ${inView ? "left-translate" : ""}`}>
         <img src="education-section.webp" />
       </div>
-      <div className="right-section">
+      <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">
           <div className="educations">
             <h2>Education</h2>

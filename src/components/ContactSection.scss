@@ -5,12 +5,18 @@
   color: white;
   width: 100%;
   min-height: 100dvh;
-  //   background-image: linear-gradient(90deg, #84a8ea 0.5%, #d5e3f1 100%);
   background-image: linear-gradient(90deg, #84eabc 0.5%, #a5dfe5 100%);
+  overflow: hidden;
 
   .left-section {
     padding: 30px;
     width: 70%;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+
+    &.left-translate {
+      transform: translateX(0%);
+    }
 
     .content-container {
       border-radius: 20px 20px 150px 20px;
@@ -196,6 +202,12 @@
     display: flex;
     width: 30%;
     height: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+
+    &.right-translate {
+      transform: translateX(0%);
+    }
 
     img {
       width: 100%;

@@ -1,9 +1,15 @@
 // import React from "react";
 import "./ExperienceSection.scss";
+import { useInView } from "react-intersection-observer";
 
 type Props = {};
 
 export default function ExperienceSection({}: Props) {
+   const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
   const experience = [
     {
       company: {
@@ -48,8 +54,8 @@ export default function ExperienceSection({}: Props) {
   ];
 
   return (
-    <section className="experience-section">
-      <div className="left-section">
+    <section className="experience-section" ref={ref}>
+      <div className={`left-section ${inView ? "left-translate" : ""}`}>
         <div className="content-container">
           <h2>Work Experience</h2>
 
@@ -81,7 +87,7 @@ export default function ExperienceSection({}: Props) {
           ))}
         </div>
       </div>
-      <div className="right-section">
+      <div  className={`right-section ${inView ? "right-translate" : ""}`}>
         <img src="experience-section.webp" />
       </div>
     </section>

@@ -1,15 +1,23 @@
 // import React from "react";
 import "./AboutSection.scss";
+import { useInView } from 'react-intersection-observer';
+
 
 type Props = {};
 
 export default function AboutSection({}: Props) {
+
+const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
   return (
-    <section className="about-section">
-      <div className="right-section">
+    <section className="about-section" ref={ref}>
+      <div  className={`left-section ${inView ? "left-translate" : ""}`}>
         <img src="about-image.webp" />
       </div>
-      <div className="left-section">
+      <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">
           <h2>LET ME INTRODUCE MYSELF</h2>
 
