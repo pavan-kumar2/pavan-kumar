@@ -1,9 +1,7 @@
 import "./HeroSection.scss";
 import { useInView } from "react-intersection-observer";
 
-type Props = {};
-
-export default function HeroSection({}: Props) {
+export default function HeroSection() {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
