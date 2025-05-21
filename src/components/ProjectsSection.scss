@@ -153,3 +153,42 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .projects-section {
+    .cards-wrapper {
+      .card {
+        width: calc((100% - 40px) / 3);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .projects-section {
+    .title {
+      font-size: 22px;
+      padding: 10px 20px 10px 10px;
+    }
+    .cards-wrapper {
+      .card {
+        width: calc((100% - 20px) / 2);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .projects-section {
+    padding: 10px;
+
+    .cards-wrapper {
+      justify-content: center;
+      gap: 25px;
+
+      .card {
+        width: calc((100% - 6%) / 1);
+      }
+    }
+  }
+}

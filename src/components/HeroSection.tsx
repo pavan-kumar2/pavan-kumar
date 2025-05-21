@@ -1,4 +1,3 @@
-// import React from "react";
 import "./HeroSection.scss";
 import { useInView } from "react-intersection-observer";
 
@@ -19,7 +18,7 @@ export default function HeroSection({}: Props) {
           <h2>FRONTEND DEVELOPER</h2>
           <p>
             Fuelled by aggression, driven by persistence, committed to
-            continuous learning, and empowered by unyielding determination
+            continuous learning, and empowered by unyielding determination.
           </p>
           <a className="download-btn" href="Resume_Coming_Soon.pdf" download>
             get my CV
