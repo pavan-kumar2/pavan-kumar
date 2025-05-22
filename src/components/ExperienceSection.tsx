@@ -1,10 +1,7 @@
-// import React from "react";
 import "./ExperienceSection.scss";
 import { useInView } from "react-intersection-observer";
 
-type Props = {};
-
-export default function ExperienceSection({}: Props) {
+export default function ExperienceSection() {
    const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
