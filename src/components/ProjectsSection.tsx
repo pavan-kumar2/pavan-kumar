@@ -1,10 +1,6 @@
-// import React from 'react';
-
 import "./ProjectsSection.scss";
 
-type Props = {};
-
-export default function ProjectsSection({}: Props) {
+export default function ProjectsSection() {
   const projects = [
     {
       title: "Swag of India",
@@ -60,7 +56,7 @@ export default function ProjectsSection({}: Props) {
     {
       title: "Pavan Kumar",
       description: "Pavan kunar portfoilio website",
-      image: "swagofindia-preview-image.png", // Replace with your image path
+      image: "swagofindia-preview-image.png",
       link: "",
     },
   ];
@@ -72,7 +68,7 @@ export default function ProjectsSection({}: Props) {
       <div className="cards-wrapper">
         {projects.map((project, index) => (
           <div className="card" key={index}>
-            <div className="wrapper">
+            <div className="content">
               <h3 className="name">{project.title}</h3>
               <img
                 className="project-image"
