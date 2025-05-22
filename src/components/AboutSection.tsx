@@ -3,9 +3,7 @@ import "./AboutSection.scss";
 import { useInView } from 'react-intersection-observer';
 
 
-type Props = {};
-
-export default function AboutSection({}: Props) {
+export default function AboutSection() {
 
 const { ref, inView } = useInView({
     threshold: 0.2,
@@ -21,7 +19,7 @@ const { ref, inView } = useInView({
         <div className="content-container">
           <h2>LET ME INTRODUCE MYSELF</h2>
 
-          <div>
+          <div className="about-content">
             <p>
               I’m a  <span>  detail-oriented Frontend Developer</span> with over
                <span>  2 years of experience</span> building responsive, scalable,
