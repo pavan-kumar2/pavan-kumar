@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   width: 100%;
   min-height: 100dvh;
   background-image: linear-gradient(270deg, #84eabc 0.5%, #a5dfe5 100%);
@@ -110,6 +109,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 text-decoration: none;
+                width: max-content;
               }
 
               .view-btn {
@@ -128,6 +128,44 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .eduction-certification-section {
+    position: relative;
+    .left-section {
+      width: 100%;
+      transition: all 1s ease-in-out;
+      transform: translateX(0%);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &.left-translate {
+        transform: translateX(-100%);
+      }
+
+      img {
+        height: 100dvh;
+      }
+    }
+    .right-section {
+      padding: 0;
+      width: 100%;
+      transition: all 1s ease-in-out;
+
+      .content-container {
+        margin: 10px;
+        border-radius: 15px 15px 15px 100px;
+        height: 100%;
+        padding: 20px 20px 45px;
+
+        h2 {
+          font-size: 24px;
         }
       }
     }
