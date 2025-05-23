@@ -1,9 +1,7 @@
-// import React from "react";
 import { memo } from "react";
 import "./SkillsSection.scss";
-type Props = {};
 
-const SkillsTechnologiesSection =({}: Props)=> {
+const SkillsTechnologiesSection =()=> {
   const skills = [
     { name: "HTML", logo: "html-logo.png" },
     { name: "CSS", logo: "css-logo.png" },
@@ -40,6 +38,5 @@ const SkillsTechnologiesSection =({}: Props)=> {
     </section>
   );
 }
-
 
 export default memo(SkillsTechnologiesSection);
