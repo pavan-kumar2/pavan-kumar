@@ -17,7 +17,7 @@ const { ref, inView } = useInView({
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">
-          <h2>LET ME INTRODUCE MYSELF</h2>
+          <h2>✨ABOUT ME</h2>
 
           <div className="about-content">
             <p>

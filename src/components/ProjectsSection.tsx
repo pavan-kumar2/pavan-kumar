@@ -63,7 +63,7 @@ export default function ProjectsSection() {
 
   return (
     <section className="projects-section">
-      <div className="title">Skill-Building Projects</div>
+      <div className="title">🛠️Skill-Building Projects</div>
 
       <div className="cards-wrapper">
         {projects.map((project, index) => (

@@ -54,7 +54,7 @@ export default function ExperienceSection() {
     <section className="experience-section" ref={ref}>
       <div className={`left-section ${inView ? "left-translate" : ""}`}>
         <div className="content-container">
-          <h2>Work Experience</h2>
+          <h2>💼Work Experience</h2>
 
           {experience.map((job, index) => (
             <div className="experience" key={index}>

@@ -46,7 +46,7 @@ export default function EducationCertificationSection() {
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">
           <div className="educations">
-            <h2>Education</h2>
+            <h2>🎓Education</h2>
             <ul>
               <li>
                 <div className="education">
@@ -83,7 +83,7 @@ export default function EducationCertificationSection() {
           </div>
 
           <div className="certifications">
-          <h2>Certification</h2>
+          <h2>📄Certification</h2>
           <ul>
             {certifications.map((cert, index) => (
               <li key={index}>

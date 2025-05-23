@@ -19,7 +19,7 @@ const SkillsTechnologiesSection =()=> {
 
   return (
     <section className="skills-technologies-section">
-      <div className="title">Skills & Technologies</div>
+      <div className="title">💻Skills & Technologies</div>
 
       <ul className="skills-wrapper">
         {skills.map((skill, index) => (
