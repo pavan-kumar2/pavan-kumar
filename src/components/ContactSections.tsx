@@ -93,7 +93,7 @@ export default function ContactSections({}: Props) {
     <section className="contact-section"  ref={ref}>
       <div  className={`left-section ${inView ? "left-translate" : ""}`}>
         <div className="content-container">
-          <h2>Feel Free to Contact Me</h2>
+          <h2>📬Get in Touch</h2>
 
           <form onSubmit={handleSubmit}>
             <div className="input-field">
