@@ -1,7 +1,22 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import "./SkillsSection.scss";
+import { useInView } from "react-intersection-observer";
 
-const SkillsTechnologiesSection =()=> {
+type Props = { setActiveSection: (section: string) => void };
+
+const SkillsTechnologiesSection =({setActiveSection}:Props)=> {
+
+    const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
+    useEffect(() => {
+      if (inView) {
+        setActiveSection("skillsTechnologiesSection");
+      }
+    }, [inView, setActiveSection]);
+
   const skills = [
     { name: "HTML", logo: "html-logo.png" },
     { name: "CSS", logo: "css-logo.png" },
@@ -18,8 +33,8 @@ const SkillsTechnologiesSection =()=> {
   ];
 
   return (
-    <section className="skills-technologies-section">
-      <div className="title">💻Skills & Technologies</div>
+    <section className="skills-technologies-section" ref={ref}>
+      <div className="title">🛠️Skills & Technologies</div>
 
       <ul className="skills-wrapper">
         {skills.map((skill, index) => (

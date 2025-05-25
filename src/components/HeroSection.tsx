@@ -1,11 +1,20 @@
+import { useEffect } from "react";
 import "./HeroSection.scss";
 import { useInView } from "react-intersection-observer";
 
-export default function HeroSection() {
+type Props = { setActiveSection: (section: string) => void };
+
+const HeroSection = ({setActiveSection}:Props) => {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
+
+    useEffect(() => {
+      if (inView) {
+        setActiveSection("heroSection");
+      }
+    }, [inView, setActiveSection]);
 
   return (
     <section className="hero-section" ref={ref}>
@@ -56,3 +65,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+export default HeroSection;

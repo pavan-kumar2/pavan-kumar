@@ -1,14 +1,12 @@
 // import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-
-
 import "./ContactSection.scss";
 import axios from "axios";
 
-type Props = {};
+type Props = { setActiveSection: (section: string) => void };
 
-export default function ContactSections({}: Props) {
+export default function ContactSections({setActiveSection}: Props) {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
@@ -88,6 +86,13 @@ export default function ContactSections({}: Props) {
       }, 3000);
     }
   };
+
+  
+    useEffect(() => {
+      if (inView) {
+        setActiveSection("contactSection");
+      }
+    }, [inView, setActiveSection]);
 
   return (
     <section className="contact-section"  ref={ref}>

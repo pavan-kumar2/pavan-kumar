@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import "./ExperienceSection.scss";
 import { useInView } from "react-intersection-observer";
 
-export default function ExperienceSection() {
+type Props = { setActiveSection: (section: string) => void };
+
+export default function ExperienceSection({setActiveSection}: Props) {
    const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
@@ -49,6 +52,13 @@ export default function ExperienceSection() {
       ],
     },
   ];
+
+  
+    useEffect(() => {
+      if (inView) {
+        setActiveSection("experienceSection");
+      }
+    }, [inView, setActiveSection]);
 
   return (
     <section className="experience-section" ref={ref}>

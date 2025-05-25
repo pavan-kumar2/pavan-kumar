@@ -1,15 +1,16 @@
 
+import { useEffect } from "react";
 import "./EducationCertificationSection.scss";
 import { useInView } from 'react-intersection-observer';
 
-export default function EducationCertificationSection() {
+type Props = { setActiveSection: (section: string) => void };
 
+export default function EducationCertificationSection({setActiveSection}: Props) {
 
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
-
 
   const certifications = [
     {
@@ -37,6 +38,12 @@ export default function EducationCertificationSection() {
       link: "https://skill-lync.com/certification/individual/pfw05dvzmuensjl6", // Replace with actual link
     },
   ];
+
+    useEffect(() => {
+      if (inView) {
+        setActiveSection("educationCertificationSection");
+      }
+    }, [inView, setActiveSection]);
 
   return (
     <section className="eduction-certification-section" ref={ref}> 

@@ -1,18 +1,24 @@
-// import React from "react";
+import { useEffect } from "react";
 import "./AboutSection.scss";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
+type Props = { setActiveSection: (section: string) => void };
 
-export default function AboutSection() {
-
-const { ref, inView } = useInView({
+const AboutSection = ({setActiveSection}: Props) => {
+  const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
 
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("aboutSection");
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <section className="about-section" ref={ref}>
-      <div  className={`left-section ${inView ? "left-translate" : ""}`}>
+      <div className={`left-section ${inView ? "left-translate" : ""}`}>
         <img src="about-image.webp" />
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
@@ -21,8 +27,8 @@ const { ref, inView } = useInView({
 
           <div className="about-content">
             <p>
-              I’m a  <span>  detail-oriented Frontend Developer</span> with over
-               <span>  2 years of experience</span> building responsive, scalable,
+              I’m a <span> detail-oriented Frontend Developer</span> with over
+              <span> 2 years of experience</span> building responsive, scalable,
               and efficient web applications. I thrive on transforming complex
               requirements into seamless, high-performing user interfaces, with
               a strong focus on performance, code quality, and maintainability.
@@ -30,13 +36,13 @@ const { ref, inView } = useInView({
 
             <p>
               My expertise spans responsive layouts,
-               <span>  component-driven development</span>, and building
+              <span> component-driven development</span>, and building
               interactive, real-time features. My journey in web development is
               fueled by curiosity, a deep interest in
-               <span>  frontend architecture</span>, and a drive to solve problems
+              <span> frontend architecture</span>, and a drive to solve problems
               through clean and reliable code. Whether working independently or
               within a team, I value clear structure,
-               <span>  continuous improvement</span>, and delivering purposeful
+              <span> continuous improvement</span>, and delivering purposeful
               solutions.
             </p>
           </div>
@@ -44,4 +50,6 @@ const { ref, inView } = useInView({
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

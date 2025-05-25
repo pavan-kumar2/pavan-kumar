@@ -1,6 +1,16 @@
+import { useEffect } from "react";
 import "./ProjectsSection.scss";
+import { useInView } from "react-intersection-observer";
 
-export default function ProjectsSection() {
+type Props = { setActiveSection: (section: string) => void };
+
+export default function ProjectsSection({setActiveSection}:Props) {
+
+   const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+
   const projects = [
     {
       title: "Swag of India",
@@ -61,9 +71,15 @@ export default function ProjectsSection() {
     },
   ];
 
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("projectsSection");
+    }
+  }, [inView, setActiveSection]);
+
   return (
-    <section className="projects-section">
-      <div className="title">🛠️Skill-Building Projects</div>
+    <section className="projects-section" ref={ref}>
+      <div className="title">💻Skill-Building Projects</div>
 
       <div className="cards-wrapper">
         {projects.map((project, index) => (
