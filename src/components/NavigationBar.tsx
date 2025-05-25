@@ -1,9 +1,29 @@
-// import React from 'react'
+import "./NavigationBar.scss";
 
-type Props = {}
+type Props = {
+  navigateToSection: (sectionType: string) => void,
+  activeSection: string
+};
 
-export default function NavigationBar({}: Props) {
+export default function NavigationBar({navigateToSection, activeSection}: Props) {
+
+const navList:{icon:string, type:string}[]=[
+  {icon:' 👋🏻', type:'heroSection'},
+  {icon:'✨', type:'aboutSection'},
+  {icon:'💼', type:'experienceSection'},
+  {icon:'💻', type:'projectsSection'},
+  {icon:'🛠️', type:'skillsTechnologiesSection'},
+  {icon:'🎓', type:'educationCertificationSection'},
+  {icon:'📬', type:'contactSection'}
+];
+
   return (
-    <div>NavigationBar</div>
-  )
+    <div className="navigation-bar">
+      <nav className="nav">
+        <ul>
+          {navList.map((nav, index)=> <li key={index+nav.type} className={nav.type === activeSection?'active':''} onClick={()=>navigateToSection(nav.type)}>{nav.icon}</li>)}
+        </ul>
+      </nav>
+    </div>
+  );
 }
