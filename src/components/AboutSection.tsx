@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./AboutSection.scss";
 import { useInView } from "react-intersection-observer";
+import { Section } from "../enums/section";
 
 type Props = { setActiveSection: (section: string) => void };
 
@@ -12,7 +13,7 @@ const AboutSection = ({setActiveSection}: Props) => {
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("aboutSection");
+      setActiveSection(Section.AboutSection);
     }
   }, [inView, setActiveSection]);
 

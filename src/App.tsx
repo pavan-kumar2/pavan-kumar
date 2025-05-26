@@ -9,6 +9,7 @@ import ContactSections from "./components/ContactSections";
 import FooterSection from "./components/FooterSection";
 import NavigationBar from "./components/NavigationBar";
 import { useRef, useState } from "react";
+import { Section } from "./enums/section";
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>("heroSection");
@@ -22,31 +23,29 @@ function App() {
   const contactSectionRef = useRef<HTMLDivElement>(null);
 
   const navigateToSection = (sectionType: string) => {
+
+    console.log( sectionType);
     switch (sectionType) {
-      case "heroSection":
-        heroSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      case Section.HeroSection:
+        heroSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "aboutSection":
-        aboutSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      case Section.AboutSection:
+        aboutSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "experienceSection":
-        experienceSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      case Section.ExperienceSection:
+        experienceSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "projectsSection":
-        projectsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      case Section.ProjectsSection:
+        projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "skillsTechnologiesSection":
-        skillsTechnologiesSectionRef.current?.scrollIntoView({
-          behavior: "smooth",
-        });
+      case Section.SkillsTechnologiesSection:
+        skillsTechnologiesSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "educationCertificationSection":
-        educationCertificationSectionRef.current?.scrollIntoView({
-          behavior: "smooth",
-        });
+      case Section.EducationCertificationSection:
+        educationCertificationSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
-      case "contactSection":
-        contactSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      case Section.ContactSection:
+        contactSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       default:
         return;
@@ -74,7 +73,7 @@ function App() {
       <div className="section" ref={skillsTechnologiesSectionRef}>
         <SkillsTechnologiesSection setActiveSection={setActiveSection}/>
       </div>
-      <div ref={educationCertificationSectionRef}>
+      <div className="section" ref={educationCertificationSectionRef}>
         <EducationCertificationSection setActiveSection={setActiveSection} />
       </div>
       <div className="section" ref={contactSectionRef}>

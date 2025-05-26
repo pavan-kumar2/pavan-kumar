@@ -1,15 +1,21 @@
 import { useEffect } from "react";
 import "./ProjectsSection.scss";
 import { useInView } from "react-intersection-observer";
+import { Section } from "../enums/section";
 
 type Props = { setActiveSection: (section: string) => void };
 
-export default function ProjectsSection({setActiveSection}:Props) {
-
-   const { ref, inView } = useInView({
+export default function ProjectsSection({ setActiveSection }: Props) {
+  const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection(Section.ProjectsSection);
+    }
+  }, [inView, setActiveSection]);
 
   const projects = [
     {
@@ -59,7 +65,15 @@ export default function ProjectsSection({setActiveSection}:Props) {
       description:
         "ShopMate is a modern e-commerce web app built with React, Tailwind CSS, and React Router. It uses FakeStoreAPI for product data and manages state using Context API and custom hooks. Users can browse, add to cart, and complete a mock checkout with a responsive and clean UI.",
       image: "shopmate-preview-image.png",
-      keySkills: ["React.js","Tailwind CSS", "JSX", "HTML5", "CSS3", "JavaScript", "Context API"],
+      keySkills: [
+        "React.js",
+        "Tailwind CSS",
+        "JSX",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Context API",
+      ],
       liveDemo: "https://pavan-kumar-shopmate.netlify.app",
       github: "https://github.com/pavan-kumar2/shop-mate",
     },
@@ -70,12 +84,6 @@ export default function ProjectsSection({setActiveSection}:Props) {
       link: "",
     },
   ];
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("projectsSection");
-    }
-  }, [inView, setActiveSection]);
 
   return (
     <section className="projects-section" ref={ref}>

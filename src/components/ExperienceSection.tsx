@@ -1,20 +1,27 @@
 import { useEffect } from "react";
 import "./ExperienceSection.scss";
 import { useInView } from "react-intersection-observer";
+import { Section } from "../enums/section";
 
 type Props = { setActiveSection: (section: string) => void };
 
-export default function ExperienceSection({setActiveSection}: Props) {
-   const { ref, inView } = useInView({
+export default function ExperienceSection({ setActiveSection }: Props) {
+  const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
 
+  useEffect(() => {
+    if (inView) {
+      setActiveSection(Section.ExperienceSection);
+    }
+  }, [inView, setActiveSection]);
+
   const experience = [
     {
       company: {
-        name:'Tradexa Technologies Pvt. Ltd.', 
-        url:'https://www.google.com/search?q=Tradexa+Technologies+Pvt.+Ltd.'
+        name: "Tradexa Technologies Pvt. Ltd.",
+        url: "https://www.google.com/search?q=Tradexa+Technologies+Pvt.+Ltd.",
       },
       role: "Frontend Developer",
       duration: "19/07/2023 - Present",
@@ -34,8 +41,8 @@ export default function ExperienceSection({setActiveSection}: Props) {
     },
     {
       company: {
-        name:'Tradexa Technologies Pvt. Ltd.', 
-        url:'https://www.google.com/search?q=Tradexa+Technologies+Pvt.+Ltd.'
+        name: "Tradexa Technologies Pvt. Ltd.",
+        url: "https://www.google.com/search?q=Tradexa+Technologies+Pvt.+Ltd.",
       },
       role: "Intern Frontend Developer",
       duration: "18/01/2023 – 18/07/2023",
@@ -53,13 +60,6 @@ export default function ExperienceSection({setActiveSection}: Props) {
     },
   ];
 
-  
-    useEffect(() => {
-      if (inView) {
-        setActiveSection("experienceSection");
-      }
-    }, [inView, setActiveSection]);
-
   return (
     <section className="experience-section" ref={ref}>
       <div className={`left-section ${inView ? "left-translate" : ""}`}>
@@ -69,7 +69,9 @@ export default function ExperienceSection({setActiveSection}: Props) {
           {experience.map((job, index) => (
             <div className="experience" key={index}>
               <h3 className="title">
-                <span>{job.role}</span> -  <a href={job.company.url} target="_blank">{job.company.name}</a>
+                <span>{job.role}</span> - <a href={job.company.url} target="_blank">
+                  {job.company.name}
+                </a>
               </h3>
               <p className="duration">{job.duration}</p>
               <ul className="contributions">
@@ -84,7 +86,7 @@ export default function ExperienceSection({setActiveSection}: Props) {
                   {job.projectsIWorked.map((project, i) => (
                     <li key={i}>
                       <a href={project.url} target="_black">
-                      {project.name}
+                        {project.name}
                       </a>
                     </li>
                   ))}
@@ -94,7 +96,7 @@ export default function ExperienceSection({setActiveSection}: Props) {
           ))}
         </div>
       </div>
-      <div  className={`right-section ${inView ? "right-translate" : ""}`}>
+      <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <img src="experience-section.webp" />
       </div>
     </section>

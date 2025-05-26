@@ -1,29 +1,36 @@
+import { Section } from "../enums/section";
 import "./NavigationBar.scss";
 
 type Props = {
-  navigateToSection: (sectionType: string) => void,
-  activeSection: string
+  navigateToSection: (sectionType: string) => void;
+  activeSection: string;
 };
 
-export default function NavigationBar({navigateToSection, activeSection}: Props) {
-
-const navList:{icon:string, type:string}[]=[
-  {icon:' 👋🏻', type:'heroSection'},
-  {icon:'✨', type:'aboutSection'},
-  {icon:'💼', type:'experienceSection'},
-  {icon:'💻', type:'projectsSection'},
-  {icon:'🛠️', type:'skillsTechnologiesSection'},
-  {icon:'🎓', type:'educationCertificationSection'},
-  {icon:'📬', type:'contactSection'}
-];
+export default function NavigationBar({
+  navigateToSection,
+  activeSection,
+}: Props) {
+  const navList: { icon: string; type: string }[] = [
+    { icon: "👋🏻", type: Section.HeroSection },
+    { icon: "✨", type: Section.AboutSection },
+    { icon: "💼", type: Section.ExperienceSection },
+    { icon: "💻", type: Section.ProjectsSection },
+    { icon: "🛠️", type: Section.SkillsTechnologiesSection },
+    { icon: "🎓", type: Section.EducationCertificationSection },
+    { icon: "📬", type: Section.ContactSection },
+  ];
 
   return (
     <div className="navigation-bar">
-      <nav className="nav">
-        <ul>
-          {navList.map((nav, index)=> <li key={index+nav.type} className={nav.type === activeSection?'active':''} onClick={()=>navigateToSection(nav.type)}>{nav.icon}</li>)}
-        </ul>
-      </nav>
+      {navList.map((nav, index) => (
+        <button
+          key={index + nav.type}
+          className={nav.type === activeSection ? "active" : ""}
+          onClick={() => navigateToSection(nav.type)}
+        >
+          {nav.icon}
+        </button>
+      ))}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import "./ContactSection.scss";
 import axios from "axios";
+import { Section } from "../enums/section";
 
 type Props = { setActiveSection: (section: string) => void };
 
@@ -25,6 +26,13 @@ export default function ContactSections({setActiveSection}: Props) {
     class?: string;
     status?: string;
   }>({});
+
+  
+    useEffect(() => {
+      if (inView) {
+        setActiveSection(Section.ContactSection);
+      }
+    }, [inView, setActiveSection]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -86,13 +94,6 @@ export default function ContactSections({setActiveSection}: Props) {
       }, 3000);
     }
   };
-
-  
-    useEffect(() => {
-      if (inView) {
-        setActiveSection("contactSection");
-      }
-    }, [inView, setActiveSection]);
 
   return (
     <section className="contact-section"  ref={ref}>
