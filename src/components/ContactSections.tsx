@@ -5,9 +5,12 @@ import "./ContactSection.scss";
 import axios from "axios";
 import { Section } from "../enums/section";
 
+const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
+
 type Props = { setActiveSection: (section: string) => void };
 
 export default function ContactSections({setActiveSection}: Props) {
+
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
@@ -57,9 +60,9 @@ export default function ContactSections({setActiveSection}: Props) {
       user_id: string;
       template_params: { name: string; email: string; message: string };
     } = {
-      service_id: "service_gw98pac",
-      template_id: "template_12ivt5p",
-      user_id: "O6e9EFJp2inNw0rN4",
+      service_id: SERVICE_ID,
+      template_id: TEMPLATE_ID,
+      user_id: USER_ID,
       template_params: { ...formData },
     };
 
