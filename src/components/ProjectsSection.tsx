@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import "./ProjectsSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
+import { ProjectsSectionProps } from "../types/Section.types";
 
-type Props = { setActiveSection: (section: string) => void };
-
-export default function ProjectsSection({ setActiveSection }: Props) {
+export default function ProjectsSection({
+  setActiveSection,
+}: ProjectsSectionProps) {
+  
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
@@ -78,9 +80,10 @@ export default function ProjectsSection({ setActiveSection }: Props) {
       github: "https://github.com/pavan-kumar2/shop-mate",
     },
     {
-      title: "Pavan Kumar",
-      description: "Pavan kunar portfoilio website",
-      image: "swagofindia-preview-image.png",
+      title: "Pavan Kumar Portfolio",
+      description:
+        "Pavan Kumar portfolio website, showcasing skills, projects, and contact information.",
+      image: "pavankumar-portfolio-preview-image.png",
       link: "",
     },
   ];

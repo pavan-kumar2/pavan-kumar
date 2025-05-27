@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import "./AboutSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
+import { AboutSectionProps } from "../types/Section.types";
 
-type Props = { setActiveSection: (section: string) => void };
-
-const AboutSection = ({setActiveSection}: Props) => {
+const AboutSection = ({setActiveSection}: AboutSectionProps) => {
+  
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,

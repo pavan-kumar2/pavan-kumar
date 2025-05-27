@@ -1,15 +1,12 @@
 import { Section } from "../enums/section";
+import { NavigationBarProps } from "../types/Section.types";
 import "./NavigationBar.scss";
-
-type Props = {
-  navigateToSection: (sectionType: string) => void;
-  activeSection: string;
-};
 
 export default function NavigationBar({
   navigateToSection,
   activeSection,
-}: Props) {
+}: NavigationBarProps) {
+  
   const navList: { icon: string; type: string }[] = [
     { icon: "👋🏻", type: Section.HeroSection },
     { icon: "✨", type: Section.AboutSection },

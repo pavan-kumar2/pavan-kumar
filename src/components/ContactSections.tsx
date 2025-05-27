@@ -4,12 +4,11 @@ import { useInView } from "react-intersection-observer";
 import "./ContactSection.scss";
 import axios from "axios";
 import { Section } from "../enums/section";
+import { ContactSectionsProps } from "../types/Section.types";
 
 const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
 
-type Props = { setActiveSection: (section: string) => void };
-
-export default function ContactSections({setActiveSection}: Props) {
+export default function ContactSections({setActiveSection}: ContactSectionsProps) {
 
   const { ref, inView } = useInView({
     threshold: 0.2,

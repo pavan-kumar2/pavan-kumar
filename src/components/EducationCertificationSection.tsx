@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import "./EducationCertificationSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
-
-type Props = { setActiveSection: (section: string) => void };
+import { EducationCertificationSectionProps } from "../types/Section.types";
 
 export default function EducationCertificationSection({
   setActiveSection,
-}: Props) {
+}: EducationCertificationSectionProps) {
+  
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,

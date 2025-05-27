@@ -1,9 +1,6 @@
-// import React from "react";
 import "./FooterSection.scss";
 
-type Props = {};
-
-export default function FooterSection({}: Props) {
+export default function FooterSection() {
   return (
     <footer className="footer-section">
       <p className="copyright">© {new Date().getFullYear()} Pavan Kumar. All rights reserved.</p>
