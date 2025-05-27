@@ -59,11 +59,9 @@ export default function EducationCertificationSection({
               <li>
                 <div className="education">
                   <span> Bachelor of Engineering(B.E) </span>
-                  in <span>Mechanical engineering</span> at
-                  <a href="https://www.sahyadri.edu.in/" target="_blank">
+                  in <span>Mechanical engineering</span> at <a href="https://www.sahyadri.edu.in/" target="_blank">
                     Sahyadri College Of Engineering & Management
-                  </a>
-                  passed out in 2021
+                  </a> passed out in 2021
                 </div>
               </li>
               {/* <li>
