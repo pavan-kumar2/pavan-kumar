@@ -1,7 +1,7 @@
 @use "@style/base" as *;
 
 .navigation-bar {
-  position: absolute;
+  position: fixed;
   bottom: 50%;
   left: calc(100% - 17px);
   transform: translate(-100%, 50%);

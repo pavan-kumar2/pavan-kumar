@@ -33,6 +33,9 @@ ol {
   overflow-y: auto;
   height: 100dvh;
   scroll-snap-type: y mandatory;
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
 
   .section,
   footer {
