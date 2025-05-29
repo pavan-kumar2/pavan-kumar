@@ -1,7 +1,7 @@
+@use "@style/base" as *;
+
 .experience-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-style(center, center);
   width: 100%;
   min-height: 100dvh;
   background-image: linear-gradient(90deg, #84eabc 0.5%, #a5dfe5 100%);
@@ -19,21 +19,14 @@
 
     .content-container {
       border-radius: 20px 20px 150px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex-style(center, center, 25px, null, column);
       height: 100%;
       background-color: #ffffff;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
       padding: 30px 60px 30px 30px;
-      gap: 25px;
-      color: black;
 
       h2 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #000000;
+        @include font-style(28px, 600);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -42,23 +35,20 @@
 
       .experience {
         .title {
-          font-size: 22px;
-          font-weight: 500;
-          color: #000000;
+          @include font-style(22px, 500);
           text-transform: uppercase;
           letter-spacing: 1px;
           line-height: 30px;
           span {
-            font-weight: 600;
+            @include font-style(null, 600, null);
           }
           a {
             text-decoration: none;
+            @include font-style($f-color: #0030ff);
           }
         }
         .duration {
-          font-size: 18px;
-          font-weight: 400;
-          color: #000000;
+          @include font-style(18px, 400);
           text-transform: uppercase;
           letter-spacing: 1px;
           line-height: 30px;
@@ -66,33 +56,25 @@
           width: max-content;
         }
         .contributions {
-          display: flex;
-          flex-direction: column;
-          gap: 3px;
+          @include flex-style($gap: 3px, $direction: column);
           margin: 20px 0 20px 30px;
           li {
-            font-size: 16px;
-            font-weight: 400;
-            color: #000000;
+            @include font-style(16px, 400);
           }
         }
 
         .project-worked-on {
           h3 {
-            font-size: 20px;
-            font-weight: 500;
-            color: #000000;
+            @include font-style(20px, 500);
           }
           ul {
-            display: flex;
-            gap: 15px;
+            @include flex-style($gap: 15px);
             margin: 10px 0 10px 30px;
             list-style: none;
             li {
-              display: flex;
+              @include flex-style();
               a {
-                font-size: 16px;
-                font-weight: 400;
+                @include font-style(16px, 400, #0030ff);
                 border: 1px solid #000000;
                 border-radius: 10px;
                 padding: 10px;
@@ -105,7 +87,7 @@
     }
   }
   .right-section {
-    display: flex;
+    @include flex-style();
     width: 30%;
     height: 100%;
     transition: all 0.5s ease-in-out;
@@ -139,18 +121,18 @@
         padding: 20px 20px 45px;
 
         h2 {
-          font-size: 24px;
+          @include font-style(24px, $f-color: null);
           letter-spacing: 1.5px;
         }
 
         .experience {
           .title {
-            font-size: 18px;
+            @include font-style(18px, $f-color: null);
             line-height: normal;
             letter-spacing: 0.5px;
           }
           .duration {
-            font-size: 16px;
+            @include font-style(16px, $f-color: null);
             letter-spacing: normal;
           }
           .contributions {
@@ -159,10 +141,10 @@
 
           .project-worked-on {
             h3 {
-              font-size: 18px;
+              @include font-style(18px, $f-color: null);
             }
             ul {
-              flex-wrap: wrap;
+              @include flex-style($wrap: wrap);
               margin: 10px 0 10px 25px;
             }
           }

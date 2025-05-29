@@ -1,12 +1,12 @@
+@use "@style/base" as *;
+
 .navigation-bar {
   position: absolute;
   bottom: 50%;
   left: calc(100% - 17px);
   transform: translate(-100%, 50%);
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  @include flex-style($gap: 5px, $direction: column);
 
   @media (max-width: 991px) {
     left: calc(100% - 5px);
@@ -16,10 +16,8 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+    @include flex-style(center, center);
+    @include font-style(16px, $f-color: null);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: relative;

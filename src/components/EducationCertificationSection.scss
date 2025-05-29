@@ -1,14 +1,14 @@
+@use "@style/base" as *;
+
 .eduction-certification-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-style(center, center);
   width: 100%;
   min-height: 100dvh;
   background-image: linear-gradient(270deg, #84eabc 0.5%, #a5dfe5 100%);
   overflow: hidden;
 
   .left-section {
-    display: flex;
+    @include flex-style();
     width: 30%;
     height: 100%;
     transition: all 0.5s ease-in-out;
@@ -40,20 +40,14 @@
 
     .content-container {
       border-radius: 20px 20px 20px 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include flex-style(null, center, 30px, null, column);
       height: 100%;
       background-color: #ffffff;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
       padding: 30px 30px 30px 60px;
-      gap: 30px;
-      color: black;
 
       h2 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #000000;
+        @include font-style(28px, 600);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -62,24 +56,20 @@
 
       .educations {
         ul {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
+          @include flex-style($gap: 15px, $direction: column);
           margin-left: 25px;
           li {
             .education {
-              font-size: 20px;
+              @include font-style(20px, 400);
               line-height: 30px;
-              font-weight: 400;
-              color: #000000;
 
               span {
-                font-weight: 600;
+                @include font-style($f-weight: 600, $f-color: null);
               }
 
               a {
                 text-decoration: none;
-                font-weight: 600;
+                @include font-style($f-weight: 600, $f-color: #0030ff);
               }
             }
           }
@@ -88,34 +78,25 @@
 
       .certifications {
         ul {
-          display: flex;
-          flex-direction: column;
           margin: 0 0 0 25px;
-          gap: 15px;
+          @include flex-style($direction: column, $gap: 15px);
 
           li {
             .certificate {
-              display: flex;
-              flex-direction: column;
-              gap: 5px;
+              @include flex-style($direction: column, $gap: 5px);
 
               .title {
-                font-size: 18px;
-                font-weight: 600;
-                color: #000000;
+                @include font-style(18px, 600);
               }
 
               .provider {
-                font-size: 16px;
-                font-weight: 400;
+                @include font-style(16px, 400, #0030ff);
                 text-decoration: none;
                 width: max-content;
               }
 
               .view-btn {
-                font-size: 16px;
-                font-weight: 500;
-                color: #ffffff;
+                @include font-style(16px, 500, #ffffff);
                 background-color: #000000;
                 padding: 10px 20px;
                 border-radius: 5px;
@@ -165,7 +146,7 @@
         padding: 20px 20px 45px;
 
         h2 {
-          font-size: 24px;
+          @include font-style(24px, $f-color: null);
           letter-spacing: 1.5px;
         }
       }

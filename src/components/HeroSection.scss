@@ -1,8 +1,7 @@
+@use "@style/base" as *;
+
 .hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  @include flex-style(center, center);
   width: 100%;
   min-height: 100dvh;
   background-image: linear-gradient(90deg, #84eabc 0.5%, #a5dfe5 100%);
@@ -22,20 +21,14 @@
 
     .content-container {
       border-radius: 20px 20px 150px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex-style(center, center, 15px, null, column);
       height: 100%;
       background-color: #ffffff;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
       padding: 30px 60px 30px 30px;
-      gap: 15px;
 
       h2 {
-        font-size: 28px;
-        font-weight: 600;
-        color: #000000;
+        @include font-style(28px, 600);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -54,9 +47,7 @@
       }
 
       p {
-        font-size: 30px;
-        font-weight: 500;
-        color: #000000;
+        @include font-style(30px, 500);
         letter-spacing: 1px;
         margin: 40px 0;
         line-height: 30px;
@@ -65,24 +56,16 @@
 
       .contact-info {
         .mail {
-          display: flex;
-          align-items: center;
-          gap: 5px;
+          @include flex-style(center, $gap: 5px);
           margin-bottom: 10px;
 
           .label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #000000;
+            @include font-style(16px, 500);
           }
 
           a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 16px;
-            font-weight: 500;
-            color: #0030ff;
+            @include flex-style(center, $gap: 5px);
+            @include font-style(16px, 500, #0030ff);
             text-decoration: none;
 
             .icon {
@@ -92,25 +75,17 @@
         }
 
         .social-media-container {
-          display: flex;
-          align-items: center;
-          gap: 5px;
+          @include flex-style(center, $gap: 5px);
           .label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #000000;
+            @include font-style(16px, 500);
             width: max-content;
           }
 
           .social-media {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            @include flex-style(center, $gap: 15px);
 
             a {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include flex-style(center, center);
 
               img {
                 width: 25px;
@@ -128,9 +103,7 @@
 
       .download-btn {
         border: none;
-        font-size: 16px;
-        font-weight: 500;
-        color: #ffffff;
+        @include font-style(16px, 500, #ffffff);
         background-color: #000000;
         padding: 10px 20px;
         border-radius: 5px;
@@ -144,7 +117,7 @@
     }
   }
   .right-section {
-    display: flex;
+    @include flex-style();
     width: 30%;
     height: 100%;
     transition: all 0.5s ease-in-out;
@@ -178,7 +151,7 @@
         padding: 20px 20px 45px;
 
         h2 {
-          font-size: 24px;
+          @include font-style(24px, $f-color: null);
           letter-spacing: 1.5px;
 
           &:first-child {

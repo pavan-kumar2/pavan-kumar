@@ -64,29 +64,6 @@ export default function EducationCertificationSection({
                   </a> passed out in 2021
                 </div>
               </li>
-              {/* <li>
-              <div className="education">
-                  <span> Diploma</span>
-                  in <span>Mechanical engineering</span> at
-                  <a href="https://www.snspt.org/"> Sri Niranjana Swami Polytechnic (SNSP) Bajpe </a> 
-                  passed out in 2018
-                </div>
-              </li>
-              <li>
-              <div className="education">
-                  <span> Class 12th </span>
-                  in <span>Commerce</span> at
-                  <a href="https://www.google.com/search?q=St.+Josephs+Pre-University+College+Bajpe"> St. Josephs Pre-University College </a>
-                  passed out in 2015
-                </div>
-              </li>
-              <li>
-              <div className="education">
-                  <span> Class 10th </span> at
-                  <a href="https://www.google.com/search?q=St.+Joseph%60s+High+School+bajpe"> St. Joseph`s High School </a>
-                  passed out in 2013
-                </div>
-                </li> */}
             </ul>
           </div>
 

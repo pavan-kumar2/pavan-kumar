@@ -1,3 +1,5 @@
+@use "@style/base" as *;
+
 /* Animation */
 @keyframes rotate {
   from,
@@ -35,18 +37,15 @@
   min-height: 100dvh;
   padding: 30px;
   background-image: linear-gradient(90deg, #84eabc 0.5%, #a5dfe5 100%);
-  display: flex;
-  flex-direction: column;
+  @include flex-style($direction: column);
 
   .title {
     width: max-content;
     margin-bottom: 30px;
     background: white;
-    color: black;
     padding: 15px 30px 15px 15px;
     border-radius: 0 30px 30px 0;
-    font-size: 28px;
-    font-weight: 600;
+    @include font-style(28px, 600);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -54,25 +53,18 @@
   }
 
   .skills-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    @include flex-style($justify: center, $wrap: wrap, $gap: 25px);
     margin: auto;
 
     li {
       width: calc(100% / 9);
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flex-style(center, $direction: column);
 
       .skill {
         overflow: hidden;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-style(center, center);
 
         animation-name: rotate;
         background-color: rgba(255, 255, 255, 0.8);
@@ -163,9 +155,7 @@
 
       .skill-label {
         background-color: white;
-        color: black;
-        font-size: 14px;
-        font-weight: 600;
+        @include font-style(14px, 600);
         padding: 5px;
         text-align: center;
         margin-top: 10px;
@@ -180,7 +170,7 @@
 @media only screen and (max-width: 991px) {
   .skills-technologies-section {
     .title {
-      font-size: 20px;
+      @include font-style(20px, $f-color: null);
       padding: 10px 20px 10px 10px;
       margin-bottom: 25px;
       letter-spacing: 1.5px;
@@ -192,10 +182,10 @@
   .skills-technologies-section {
     padding: 30px 10px;
     .skills-wrapper {
-      gap: 10px;
+      @include flex-style($gap: 10px);
       li {
         .skill-label {
-          font-size: 12px;
+          @include font-style(12px, $f-color: null);
         }
       }
     }
