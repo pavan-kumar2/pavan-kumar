@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./EducationCertificationSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
-import { EducationCertificationSectionProps } from "../types/Section.types";
+import { Certification, EducationCertificationSectionProps } from "../types/Section.types";
 
 export default function EducationCertificationSection({
   setActiveSection,
@@ -19,7 +19,7 @@ export default function EducationCertificationSection({
     }
   }, [inView, setActiveSection]);
 
-  const certifications = [
+  const certifications:Certification[] = [
     {
       title: "Complete Front-End Development",
       provider: {

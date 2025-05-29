@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import "./ContactSection.scss";
 import axios from "axios";
 import { Section } from "../enums/section";
-import { ContactSectionsProps } from "../types/Section.types";
+import { ContactSectionsProps, MailParams, NotificationParams, TemplateParams } from "../types/Section.types";
 
 const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
 
@@ -16,7 +16,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
   });
 
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<TemplateParams>({
     name: "",
     email: "",
     message: "",
@@ -24,11 +24,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
 
   const [loader, setLoader] = useState(false);
 
-  const [notification, setNotification] = useState<{
-    class?: string;
-    status?: string;
-  }>({});
-
+  const [notification, setNotification] = useState<NotificationParams>({});
   
     useEffect(() => {
       if (inView) {
@@ -53,12 +49,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
 
     setLoader(true);
 
-    const data: {
-      service_id: string;
-      template_id: string;
-      user_id: string;
-      template_params: { name: string; email: string; message: string };
-    } = {
+    const data: MailParams = {
       service_id: SERVICE_ID,
       template_id: TEMPLATE_ID,
       user_id: USER_ID,

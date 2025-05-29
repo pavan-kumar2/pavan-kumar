@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./ProjectsSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
-import { ProjectsSectionProps } from "../types/Section.types";
+import { Project, ProjectsSectionProps } from "../types/Section.types";
 
 export default function ProjectsSection({
   setActiveSection,
@@ -19,7 +19,7 @@ export default function ProjectsSection({
     }
   }, [inView, setActiveSection]);
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Swag of India",
       description:
@@ -84,7 +84,18 @@ export default function ProjectsSection({
       description:
         "Pavan Kumar portfolio website, showcasing skills, projects, and contact information.",
       image: "pavankumar-portfolio-preview-image.png",
-      link: "",
+       keySkills: [
+        "React.js",
+        "Tailwind CSS",
+        "JSX",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Context API",
+      ],
+      liveDemo: "https://pavan-kumar-shopmate.netlify.app",
+      github: "https://github.com/pavan-kumar2/shop-mate",
+
     },
   ];
 

@@ -2,7 +2,7 @@ import { memo, useEffect } from "react";
 import "./SkillsSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
-import { SkillsTechnologiesSectionProps } from "../types/Section.types";
+import { Skills, SkillsTechnologiesSectionProps } from "../types/Section.types";
 
 
 const SkillsTechnologiesSection = ({ setActiveSection }: SkillsTechnologiesSectionProps) => {
@@ -18,7 +18,7 @@ const SkillsTechnologiesSection = ({ setActiveSection }: SkillsTechnologiesSecti
     }
   }, [inView, setActiveSection]);
 
-  const skills = [
+  const skills:Skills[] = [
     { name: "HTML", logo: "html-logo.png" },
     { name: "CSS", logo: "css-logo.png" },
     { name: "JavaScript", logo: "javascript-logo.png" },
@@ -30,7 +30,6 @@ const SkillsTechnologiesSection = ({ setActiveSection }: SkillsTechnologiesSecti
     { name: "RXJS", logo: "Rxjs-logo.png" },
     { name: "SASS/SCSS", logo: "sass-scss-logo.svg" },
     { name: "GIT", logo: "git-logo.svg" },
-    // { name: "FIGMA", logo: "Figma-logo.png" },
   ];
 
   return (

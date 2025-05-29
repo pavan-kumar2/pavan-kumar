@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./ExperienceSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
-import { ExperienceSectionProps } from "../types/Section.types";
+import { Experience, ExperienceSectionProps } from "../types/Section.types";
 
 export default function ExperienceSection({ setActiveSection }: ExperienceSectionProps) {
   
@@ -17,7 +17,7 @@ export default function ExperienceSection({ setActiveSection }: ExperienceSectio
     }
   }, [inView, setActiveSection]);
 
-  const experience = [
+  const experience:Experience[] = [
     {
       company: {
         name: "Tradexa Technologies Pvt. Ltd.",
