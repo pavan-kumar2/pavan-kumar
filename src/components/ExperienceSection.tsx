@@ -3,6 +3,7 @@ import "./ExperienceSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
 import { Experience, ExperienceSectionProps } from "../types/Section.types";
+import images from "../utility/images";
 
 export default function ExperienceSection({ setActiveSection }: ExperienceSectionProps) {
   
@@ -97,7 +98,7 @@ export default function ExperienceSection({ setActiveSection }: ExperienceSectio
         </div>
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
-        <img src="experience-section.webp" />
+        <img src={images.experienceSection} />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import "./AboutSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
 import { AboutSectionProps } from "../types/Section.types";
+import images from "../utility/images";
 
 const AboutSection = ({setActiveSection}: AboutSectionProps) => {
   
@@ -20,7 +21,7 @@ const AboutSection = ({setActiveSection}: AboutSectionProps) => {
   return (
     <section className="about-section" ref={ref}>
       <div className={`left-section ${inView ? "left-translate" : ""}`}>
-        <img src="about-image.webp" />
+        <img src={images.aboutImage} />
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">

@@ -3,6 +3,7 @@ import "./EducationCertificationSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
 import { Certification, EducationCertificationSectionProps } from "../types/Section.types";
+import images from "../utility/images";
 
 export default function EducationCertificationSection({
   setActiveSection,
@@ -49,7 +50,7 @@ export default function EducationCertificationSection({
   return (
     <section className="eduction-certification-section" ref={ref}>
       <div className={`left-section ${inView ? "left-translate" : ""}`}>
-        <img src="education-section.webp" />
+        <img src={images.educationSection} />
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
         <div className="content-container">

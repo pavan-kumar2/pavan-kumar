@@ -3,6 +3,7 @@ import "./ProjectsSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
 import { Project, ProjectsSectionProps } from "../types/Section.types";
+import images from "../utility/images";
 
 export default function ProjectsSection({
   setActiveSection,
@@ -24,7 +25,7 @@ export default function ProjectsSection({
       title: "Swag of India",
       description:
         "Swag of India is a responsive e-commerce website designed to provide users with a seamless online shopping experience. The project showcases various products and offers functionalities like product browsing, cart management, and user profile handling.",
-      image: "swag-of-india-preview-image.png",
+      image: images.swagOfIndiaPreview,
       keySkills: [
         "HTML5",
         "CSS3",
@@ -40,7 +41,7 @@ export default function ProjectsSection({
       title: "Movie Overview Application",
       description:
         "The movie overview app is a web application that allows users to browse and search for movies, view movie details, and view their IMDb ratings. And uses a third-party API to retrieve movie data.",
-      image: "movie-overview-application-preview-image.png",
+      image: images.movieOverviewApp,
       keySkills: ["HTML5", "CSS3", "JavaScript", "React.js", "AJAX", "JSX"],
       liveDemo: "https://movie-overview-application.netlify.app",
       github: "https://github.com/pavan-kumar2/Movie-Overview-Application",
@@ -49,7 +50,7 @@ export default function ProjectsSection({
       title: "Multinational News App",
       description:
         "Developed a comprehensive, mobile-responsive news browsing application using Angular and RxJS. This project empowers users to explore news articles by country and source, with efficient data flow.",
-      image: "multinational-news-app-preview-image.png",
+      image: images.multinationalNewsAppPreview,
       keySkills: [
         "HTML5",
         "CSS3",
@@ -66,7 +67,7 @@ export default function ProjectsSection({
       title: "ShopMate",
       description:
         "ShopMate is a modern e-commerce web app built with React, Tailwind CSS, and React Router. It uses FakeStoreAPI for product data and manages state using Context API and custom hooks. Users can browse, add to cart, and complete a mock checkout with a responsive and clean UI.",
-      image: "shopmate-preview-image.png",
+      image: images.shopmatePreview,
       keySkills: [
         "React.js",
         "Tailwind CSS",
@@ -83,7 +84,7 @@ export default function ProjectsSection({
       title: "Pavan Kumar Portfolio",
       description:
         "Pavan Kumar portfolio website, showcasing skills, projects, and contact information.",
-      image: "pavankumar-portfolio-preview-image.png",
+      image: images.pavankumarPortfolioPreviewImage,
        keySkills: [
         "React.js",
         "Tailwind CSS",
@@ -121,7 +122,7 @@ export default function ProjectsSection({
             </div>
 
             <div className="character">
-              <img src="project-view.png" />
+              <img src={images.projectView} />
               <div className="buttons-wrapper">
                 <a
                   className="view-project"

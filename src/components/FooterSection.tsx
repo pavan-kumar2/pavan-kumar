@@ -1,3 +1,4 @@
+import images from "../utility/images";
 import "./FooterSection.scss";
 
 export default function FooterSection() {
@@ -11,21 +12,21 @@ export default function FooterSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="linkedin-white-icon.svg" alt="linkedIn"  />
+          <img src={images.linkedinWhiteIcon} alt="linkedIn"  />
         </a>
            <a
           href="https://github.com/pavan-kumar2"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="github-white-icon.svg" alt="github"  />
+          <img src={images.githubWhiteIcon} alt="github"  />
         </a>
         <a
           href="https://x.com/Pavankumar_0997"
           target="_blank"
           rel="noopener noreferrer"
         >
-           <img src="x-white-icon.svg" alt="X"  />
+           <img src={images.xWhiteIcon} alt="X"  />
         </a>
       </div>
     </footer>

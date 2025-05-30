@@ -5,6 +5,7 @@ import "./ContactSection.scss";
 import axios from "axios";
 import { Section } from "../enums/section";
 import { ContactSectionsProps, MailParams, NotificationParams, TemplateParams } from "../types/Section.types";
+import images from "../utility/images";
 
 const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
 
@@ -142,7 +143,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
             <div className="mail">
               <span className="label">Email:</span>
               <a href="mailto:pavankkarkera480@gmail.com">
-                <img className="icon" src="email-icon.svg" />
+                <img className="icon" src={images.emailIcon} />
                 pavankkarkera480@gmail.com
               </a>
             </div>
@@ -154,13 +155,13 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
                   href="https://www.linkedin.com/in/pavan-kumar-513180191"
                   target="_blank"
                 >
-                  <img src="LinkedIn.png" alt="LinkedIn" />
+                  <img src={images.linkedin} alt="LinkedIn" />
                 </a>
                 <a href="https://github.com/pavan-kumar2" target="_blank">
-                  <img src="GitHub.png" alt="GitHub" />
+                  <img src={images.github} alt="GitHub" />
                 </a>
                 <a href="https://x.com/Pavankumar_0997" target="_blank">
-                  <img src="X.png" alt="X" />
+                  <img src={images.xIcon} alt="X" />
                 </a>
               </div>
             </div>
@@ -168,7 +169,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
         </div>
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
-        <img src="contact-image.webp" />
+        <img src={images.contactImage} />
       </div>
     </section>
   );

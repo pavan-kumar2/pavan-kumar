@@ -3,6 +3,7 @@ import "./HeroSection.scss";
 import { useInView } from "react-intersection-observer";
 import { Section } from "../enums/section";
 import { HeroSectionProps } from "../types/Section.types";
+import images from "../utility/images";
 
 const HeroSection = ({setActiveSection}:HeroSectionProps) => {
  
@@ -28,14 +29,14 @@ const HeroSection = ({setActiveSection}:HeroSectionProps) => {
             Fuelled by aggression, driven by persistence, committed to
             continuous learning, and empowered by unyielding determination.
           </p>
-          <a className="download-btn" href="Resume_Coming_Soon.pdf" download>
+          <a className="download-btn" href={images.resumePDF} download>
             get my CV
           </a>
           <div className="contact-info">
             <div className="mail">
               <span className="label">Email:</span>
               <a href="mailto:pavankkarkera480@gmail.com">
-                <img className="icon" src="email-icon.svg" />
+                <img className="icon" src={images.emailIcon} />
                 pavankkarkera480@gmail.com
               </a>
             </div>
@@ -47,21 +48,22 @@ const HeroSection = ({setActiveSection}:HeroSectionProps) => {
                   href="https://www.linkedin.com/in/pavan-kumar-513180191"
                   target="_blank"
                 >
-                  <img src="LinkedIn.png" alt="LinkedIn" />
+                  <img src={images.linkedin} alt="LinkedIn" />
                 </a>
                 <a href="https://github.com/pavan-kumar2" target="_blank">
-                  <img src="GitHub.png" alt="GitHub" />
+                  <img src={images.github} alt="GitHub" />
                 </a>
                 <a href="https://x.com/Pavankumar_0997" target="_blank">
-                  <img src="X.png" alt="X" />
+                  <img src={images.xIcon} alt="X" />
                 </a>
+
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={`right-section ${inView ? "right-translate" : ""}`}>
-        <img src="hero-image.webp" />
+        <img src={images.heroImage} />
       </div>
     </section>
   );
