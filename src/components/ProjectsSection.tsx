@@ -83,16 +83,14 @@ export default function ProjectsSection({
     {
       title: "Pavan Kumar Portfolio",
       description:
-        "Pavan Kumar portfolio website, showcasing skills, projects, and contact information.",
+        "Portfolio Website — A responsive personal portfolio built with React and TypeScript. Features include smooth scroll animations, project showcases, and a contact form with email integration. Styled with SCSS for a clean, adaptable design.",
       image: images.pavankumarPortfolioPreviewImage,
        keySkills: [
-        "React.js",
-        "Tailwind CSS",
-        "JSX",
+        "React",
+        "TypeScript",
+        "TSX",
         "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Context API",
+        "SCSS / Sass",
       ],
       liveDemo: "https://pavankumar.dev",
       github: "https://github.com/pavan-kumar2/pavan-kumar",
