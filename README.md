@@ -2,7 +2,7 @@
 
 Welcome to my personal developer portfolio built using **React**, **TypeScript**, **SCSS**, and **Vite**. This site showcases my skills, projects, experience, education, and contact information.
 
---
+---
 
 ## Tech Stack
 
