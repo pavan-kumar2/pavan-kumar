@@ -2,7 +2,7 @@
 
 Welcome to my personal developer portfolio built using **React**, **TypeScript**, **SCSS**, and **Vite**. This site showcases my skills, projects, experience, education, and contact information.
 
---
+---
 
 ## Tech Stack
 
@@ -27,14 +27,14 @@ Welcome to my personal developer portfolio built using **React**, **TypeScript**
 ## Folder Structure
 
 pavan-kumar/
-└── src/
-├── assets/ # All static images, logos, and resume PDF
-├── components/ # React components for each portfolio section
-├── enums/ # Enum for section names
-├── style/ # SCSS base styles and mixins
-├── types/ # TypeScript interfaces and types
-├── utility/ # Utility files (like image mappings)
-├── App.tsx # Root component
-├── main.tsx # Entry point
-├── index.scss # Global styles
-└── vite-env.d.ts # Vite environment types
+  └── src/
+  ├── assets/ # All static images, logos, and resume PDF
+  ├── components/ # React components for each portfolio section
+  ├── enums/ # Enum for section names
+  ├── style/ # SCSS base styles and mixins
+  ├── types/ # TypeScript interfaces and types
+  ├── utility/ # Utility files (like image mappings)
+  ├── App.tsx # Root component
+  ├── main.tsx # Entry point
+  ├── index.scss # Global styles
+  └── vite-env.d.ts # Vite environment types
