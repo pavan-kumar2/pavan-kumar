@@ -94,9 +94,8 @@ export default function ProjectsSection({
         "JavaScript",
         "Context API",
       ],
-      liveDemo: "https://pavan-kumar-shopmate.netlify.app",
-      github: "https://github.com/pavan-kumar2/shop-mate",
-
+      liveDemo: "https://pavankumar.dev",
+      github: "https://github.com/pavan-kumar2/pavan-kumar",
     },
   ];
 
