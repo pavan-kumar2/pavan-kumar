@@ -160,7 +160,7 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
                 <a href="https://github.com/pavan-kumar2" target="_blank">
                   <img src={images.github} alt="GitHub" />
                 </a>
-                <a href="https://x.com/Pavankumar_0997" target="_blank">
+                <a href="https://x.com/Pavankumar_9_7" target="_blank">
                   <img src={images.xIcon} alt="X" />
                 </a>
               </div>

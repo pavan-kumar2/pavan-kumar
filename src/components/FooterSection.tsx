@@ -22,8 +22,8 @@ export default function FooterSection() {
           <img src={images.githubWhiteIcon} alt="github"  />
         </a>
         <a
-          href="https://x.com/Pavankumar_0997"
-          target="_blank"
+          href="https://x.com/Pavankumar_9_7"
+          target="_blank" 
           rel="noopener noreferrer"
         >
            <img src={images.xWhiteIcon} alt="X"  />
