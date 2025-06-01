@@ -100,7 +100,7 @@
             position: absolute;
             width: 100%;
             bottom: -5px;
-            @include font-style(18px, 500, #dc3545);
+            @include font-style(16px, 500, #dc3545);
 
             &.error {
               color: #dc3545;
