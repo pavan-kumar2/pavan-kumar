@@ -51,9 +51,9 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
     setLoader(true);
 
     const data: MailParams = {
-      service_id: SERVICE_ID,
-      template_id: TEMPLATE_ID,
-      user_id: USER_ID,
+      service_id: "service_gw98pac",
+      template_id: "template_12ivt5p",
+      user_id: "O6e9EFJp2inNw0rN4",
       template_params: { ...formData },
     };
 
