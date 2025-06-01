@@ -7,7 +7,7 @@ import { Section } from "../enums/section";
 import { ContactSectionsProps, MailParams, NotificationParams, TemplateParams } from "../types/Section.types";
 import images from "../utility/images";
 
-const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
+// const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
 
 export default function ContactSections({setActiveSection}: ContactSectionsProps) {
 
