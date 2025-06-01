@@ -7,7 +7,7 @@ import { Section } from "../enums/section";
 import { ContactSectionsProps, MailParams, NotificationParams, TemplateParams } from "../types/Section.types";
 import images from "../utility/images";
 
-// const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
+const {VITE_SERVICE_ID:SERVICE_ID, VITE_TEMPLATE_ID:TEMPLATE_ID, VITE_USER_ID:USER_ID} = import.meta.env;
 
 export default function ContactSections({setActiveSection}: ContactSectionsProps) {
 
@@ -51,9 +51,9 @@ export default function ContactSections({setActiveSection}: ContactSectionsProps
     setLoader(true);
 
     const data: MailParams = {
-      service_id: "service_gw98pac",
-      template_id: "template_12ivt5p",
-      user_id: "O6e9EFJp2inNw0rN4",
+      service_id: SERVICE_ID,
+      template_id: TEMPLATE_ID,
+      user_id: USER_ID,
       template_params: { ...formData },
     };
 
